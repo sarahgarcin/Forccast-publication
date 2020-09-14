@@ -1,0 +1,35 @@
+/* ----------- CITATIONS --------------- */
+.citation{
+	color: var(--noir);
+}
+
+.citation .edition-block-title{
+	display: none;
+}
+
+.citation .content-p {
+	font-family: var(--font-title);
+	font-size: 61pt; 
+	text-align: left; 
+	width:130%;
+	margin-left: -35%;
+	margin-top: -1.8cm;
+	hyphens: none;
+	line-height: 1.2;
+	height: 20cm;
+}
+
+.citation {
+    page: citation;
+}
+
+/* changer la couleur de fond de la page de gauche */
+.pagedjs_citation_page.pagedjs_right_page ~ .pagedjs_blank_page{
+	background: var(--noir);
+}
+
+@page citation {
+	@bottom-right-corner {
+  	content: none;
+  }
+}

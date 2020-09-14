@@ -1,0 +1,75 @@
+/* --------------------------- OUVERTURE ------------------------------  */
+/* Nommer la page pour styler les marges et numéros de pages */
+.ouverture{
+   page: ouverture;
+}
+
+/* Nommer le titre pour les titres courant*/
+.ouverture .edition-block-title {  
+	string-set: title content(text);
+}
+
+/* ----- OUVERTURE COLORS --------*/
+@page ouverture {
+  /* couleur des numéros de page*/
+  @bottom-right-corner {
+   color: var(--noir);
+ 	}
+ 	/* contenu titre courant et couleur du titre courant */
+ 	 @bottom-left {
+    content: 'Ouverture -> ' string(title);
+    color: var(--noir);
+  }
+}
+
+/* couleur de la page précédente*/
+.pagedjs_ouverture_page.pagedjs_right_page ~ .pagedjs_blank_page{
+	background: var(--noir);
+}
+
+.ouverture .content-ul li::before{
+	color: var(--noir);
+}
+
+.ouverture .content-figure figure{
+	background: var(--noir);
+}
+
+.ouverture figcaption,
+.ouverture .contents-container figcaption, 
+.ouverture .contents-container figcaption p{
+	color: var(--noir);
+}
+
+/* couleur du titre */
+.ouverture .edition-block-title{
+	color: var(--noir);
+}
+
+/* couleur du sous-titre */
+.ouverture .edition-block-subtitle{
+	color: var(--noir);
+}
+
+/* couleur des titres dans le texte*/
+.ouverture .contents-container h1, 
+.ouverture .contents-container h2, 
+.ouverture .contents-container h3, 
+.ouverture .contents-container h4{
+	color: var(--noir);
+}
+
+/* couleur des notes */
+.ouverture .footnote-p {
+  color: var(--noir);
+}
+
+.ouverture sup.footnote{
+	color: var(--noir);
+}
+
+
+
+/* ----- FIN OUVERTURE COLORS --------*/
+
+/* --------------------------- FIN OUVERTURE ------------------------------  */

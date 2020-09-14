@@ -1,0 +1,212 @@
+/* --------------------------- PART THREE ------------------------------  */
+
+/* Nommer la page pour styler les marges et numéros de pages */
+.part-three{
+   page: part-three;
+}
+
+/* ----- PART THREE COLORS --------*/
+@page part-three{
+  /* couleur des numéros de page*/
+  @bottom-right-corner {
+   color: var(--pantone-three);
+ 	}
+ 	/* contenu titre courant et couleur du titre courant */
+ 	 @bottom-left {
+    color: var(--pantone-three);
+  }
+}
+
+.part-three a{
+	color: var(--pantone-three);
+}
+
+/* couleur de la page précédente*/
+.pagedjs_titrepartiepart-three_page.pagedjs_right_page ~ .pagedjs_blank_page{
+	background: var(--pantone-three);
+}
+
+.pagedjs_part-three_page.pagedjs_right_page ~ .pagedjs_blank_page{
+	background: var(--pantone-three);
+}
+
+.part-three .content-ul li::before{
+	color: var(--pantone-three);
+}
+
+.part-three .content-figure figure{
+	background: var(--pantone-three);
+}
+
+.part-three figcaption,
+.part-three .contents-container figcaption, 
+.part-three .contents-container figcaption p{
+	color: var(--pantone-three);
+}
+
+/* couleur du titre */
+.part-three .edition-block-title{
+	color: var(--pantone-three);
+}
+
+/* couleur du sous-titre */
+.part-three .edition-block-subtitle{
+	color: var(--pantone-three);
+}
+
+/* couleur des titres dans le texte*/
+.part-three .contents-container h1, 
+.part-three .contents-container h2, 
+.part-three .contents-container h3, 
+.part-three .contents-container h4,
+.part-three .contents-container h5{
+	color: var(--pantone-three);
+}
+
+/* couleur des notes */
+.part-three .footnote-p {
+  color: var(--pantone-three);
+}
+
+.part-three sup.footnote{
+	color: var(--pantone-three);
+}
+
+/* Couleur des interpages */
+.part-three.titre-partie{
+  page: titrepartiepart-three;
+}
+
+@page titrepartiepart-three{
+	background-color: var(--pantone-three);
+	@bottom-right-corner {
+   content: none;
+ 	}
+
+}
+
+.part-three .ressources{
+	color: var(--pantone-three);
+}
+
+/* Mise en page part-three */
+.part-three{
+	break-before: page;
+}
+
+
+
+/* ----- FIN PART THREE COLORS --------*/
+
+
+/* ----------- Enquetes --------------- */
+.enquetes{
+	break-before: page;
+}
+
+.enquetes .tableofcontents-block-title{
+	position: relative; 
+	top: 0;
+	left:0;
+	width: 140%;
+	margin-left: -40%;
+	
+	font-size: 11pt;
+	text-align: left;
+	text-align-last: left; 
+	margin-top: 0.5cm;
+	page-break-after:auto;
+}
+.enquête .tableofcontents-block-title ul{
+	padding:0;
+}
+
+.enquetes .tableofcontents-block-title li{
+	display: block;
+	margin-bottom: 0.2cm;
+}
+
+.enquetes h4.edition-block-title, .fiche h5.edition-block-title{
+	break-before: avoid;
+}
+
+.enquête h5.edition-block-title{
+	font-size: 18pt;
+	page-break-before: always;
+	width: 100%;
+	margin-left: 0;
+}
+
+/*.fiche h5.edition-block-title::before{
+	content:"+";
+	margin-right: 0.2cm;
+}*/
+
+
+.enquête .contents-container{
+	margin-top: 1.5cm;
+}
+
+.enquetes .content-p{
+	font-style: italic;
+}
+
+
+/* ----------- TUTORIEL --------------- */
+
+/*.tutoriel-title{
+	width: 140%;
+	margin-left: -40%;
+	margin-top: 0;
+	page-break-before: always;
+}*/
+
+.contents-container h2.tutoriel-title{
+	margin-top: 0;
+	margin-bottom: 0.5cm;
+}
+
+.tutoriel-wrapper{
+	width: 105%;
+	margin-left: -23%;
+  background-color: #FFF;
+  z-index: 20;
+  position: absolute;
+  padding: 0.3cm 0.5cm;
+  page-break-before: always;
+}
+
+/* tagguer la page tutoriel pour créer une trame de plus */
+.tutoriel-wrapper{
+   page: tutoriel;
+}
+
+.pagedjs_tutoriel_page{
+	position: relative;
+}
+
+.plus-tutoriel-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.plus-tutoriel{
+	color: var(--pantone-three);
+	line-height: 0.8;
+}
+
+@page tutoriel{
+  /* couleur des numéros de page*/
+  @bottom-right-corner {
+   color: var(--pantone-three);
+   background-color: #FFF;
+ 	}
+ 	/* contenu titre courant et couleur du titre courant */
+ 	 @bottom-left {
+    color: var(--pantone-three);
+    background-color: #FFF;	
+  }
+}

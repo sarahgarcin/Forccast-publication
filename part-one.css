@@ -1,0 +1,175 @@
+/* --------------------------- PART ONE ------------------------------  */
+
+/* Nommer la page pour styler les marges et numéros de pages */
+.part-one{
+   page: part-one;
+}
+
+/* ----- PART ONE COLORS --------*/
+@page part-one{
+  /* couleur des numéros de page*/
+  @bottom-right-corner {
+   color: var(--pantone-one);
+ 	}
+ 	/* contenu titre courant et couleur du titre courant */
+ 	 @bottom-left {
+    color: var(--pantone-one);
+  }
+}
+
+.part-one a{
+	color: var(--pantone-one);
+}
+
+/* couleur de la page précédente*/
+.pagedjs_part-one_page.pagedjs_right_page ~ .pagedjs_blank_page{
+	background: var(--pantone-one);
+}
+
+.part-one .content-ul li::before{
+	color: var(--pantone-one);
+}
+
+.part-one .content-figure figure{
+	background: var(--pantone-one);
+}
+
+.part-one figcaption,
+.part-one .contents-container figcaption, 
+.part-one .contents-container figcaption p{
+	color: var(--pantone-one);
+}
+
+/* couleur du titre */
+.part-one .edition-block-title{
+	color: var(--pantone-one);
+}
+
+/* couleur du sous-titre */
+.part-one .edition-block-subtitle{
+	color: var(--pantone-one);
+}
+
+/* couleur des titres dans le texte*/
+.part-one .contents-container h1, 
+.part-one .contents-container h2, 
+.part-one .contents-container h3, 
+.part-one .contents-container h4,
+.part-one .contents-container h5{
+	color: var(--pantone-one);
+}
+
+/* couleur des notes */
+.part-one .footnote-p {
+  color: var(--pantone-one);
+}
+
+.part-one sup.footnote{
+	color: var(--pantone-one);
+}
+
+/* Couleur des interpages */
+.part-one.titre-partie{
+  page: titrepartiepart-one;
+}
+
+@page titrepartiepart-one{
+	background-color: var(--pantone-one);
+	@bottom-right-corner {
+   content: none;
+ 	}
+
+}
+
+.part-one .ressources{
+	color: var(--pantone-one);
+}
+
+/* Mise en page part-one */
+.part-one{
+	break-before: page;
+}
+
+
+
+/* ----- FIN PART ONE COLORS --------*/
+
+
+/* ----------- PERSPECTIVES / FICHES / FICHE --------------- */
+/* Nommer la page fiche pour créer des interpages avec fond blanc et plus vert*/
+.fiche{
+   page: fiche;
+}
+
+@page fiche{
+  /* couleur des numéros de page*/
+  @bottom-right-corner {
+   color: var(--pantone-one);
+ 	}
+ 	/* contenu titre courant et couleur du titre courant */
+ 	 @bottom-left {
+    color: var(--pantone-one);
+  }
+}
+
+/* Changer la couleur des interpages pour les pages fiche */
+.pagedjs_fiche_page.pagedjs_right_page ~ .pagedjs_blank_page{
+	background: #FFF;
+}
+
+.pagedjs_fiche_page.pagedjs_right_page ~ .pagedjs_blank_page .plus{
+	color: var(--pantone-one);
+}
+
+/* Menu / Sommaire pour chaque thème */
+.fiches .tableofcontents-block-title{
+	position: relative; 
+	top: 0;
+	left:0;
+	width: 140%;
+	margin-left: -40%;
+	color: var(--pantone-one);
+	font-size: 11pt;
+	text-align: left;
+	text-align-last: left; 
+	margin-top: 0.5cm;
+	page-break-after:auto;
+}
+.fiches .tableofcontents-block-title ul{
+	padding:0;
+}
+
+.fiches .tableofcontents-block-title li{
+	display: block;
+	margin-bottom: 0.2cm;
+}
+
+/* fin Menu / Sommaire pour chaque thème */
+
+/* Ajouter une page blanche avant chaque fiche */
+.fiche h4.edition-block-title{
+	font-size: 18pt;
+	break-before: right;
+	width: 100%;
+	margin-left: 0;
+}
+
+.fiche h5.edition-block-subtitle{
+	margin-left: 0;
+}
+
+
+.fiche .contents-container{
+	margin-top: 0.5cm;
+}
+
+.fiches .content-p{
+	font-style: italic;
+}
+
+.fiches .ressources{
+	color: var(--pantone-one);
+}
+
+/* --------------------------- FIN PART ONE ------------------------------  */
+
