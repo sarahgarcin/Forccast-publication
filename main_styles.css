@@ -346,9 +346,6 @@ sup.footnote{
 	line-height: 1;
 	letter-spacing: 0.05em;
 	break-after: always;
-}
-
-.tableofcontents-block-title ul{
 	margin:0;
 }
 

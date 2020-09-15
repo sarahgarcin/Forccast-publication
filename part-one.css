@@ -1,4 +1,7 @@
 /* --------------------------- PART ONE ------------------------------  */
+/* envoyer les titres courant pour cette partie */
+.pagedjs_titrepartiepart-one_page h2.edition-block-title {string-set: title content(text) }
+/*h3.edition-block-title {string-set: subtitle content(text) }*/
 
 /* Nommer la page pour styler les marges et numéros de pages */
 .part-one{
@@ -14,6 +17,7 @@
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
     color: var(--pantone-one);
+    content: string(title);
   }
 }
 
@@ -21,9 +25,27 @@
 	color: var(--pantone-one);
 }
 
+
+
 /* couleur de la page précédente*/
-.pagedjs_part-one_page.pagedjs_right_page ~ .pagedjs_blank_page{
+/* pour les interpages de titre de partie */
+.pagedjs_titrepartiepart-one_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--pantone-one);
+}
+
+/* pour les interpages d'articles */
+/*.pagedjs_part-one_page.pagedjs_right_page ~ .pagedjs_blank_page{
+	background: var(--pantone-one);
+}*/
+
+/* tentative de fixer le bug qui ne donne pas la classe .pagedjs_blank_page au page précédent les titres des articles*/
+.pagedjs_part-one_first_page{
+	background: var(--pantone-one);
+	position: relative;
+}
+
+.pagedjs_part-one_first_page .plus{
+	color: #FFF;
 }
 
 .part-one .content-ul li::before{
@@ -86,9 +108,9 @@
 }
 
 /* Mise en page part-one */
-.part-one{
+/*.part-one{
 	break-before: page;
-}
+}*/
 
 
 
@@ -112,12 +134,38 @@
   }
 }
 
+
+/* supprimer les numéros de pages sur les pages fond blanc avec les plus*/
+.pagedjs_fiche_first_page{
+   page: firstpage;
+}
+
+@page firstpage{
+  /* couleur des numéros de page*/
+  @bottom-right-corner {
+   content:none;
+ 	}
+ 	/* contenu titre courant et couleur du titre courant */
+ 	 @bottom-left {
+    content:none;
+  }
+}
+
 /* Changer la couleur des interpages pour les pages fiche */
-.pagedjs_fiche_page.pagedjs_right_page ~ .pagedjs_blank_page{
+.pagedjs_fiche_page.pagedjs_fiche_first_page.pagedjs_right_page + .pagedjs_blank_page{
 	background: #FFF;
 }
 
-.pagedjs_fiche_page.pagedjs_right_page ~ .pagedjs_blank_page .plus{
+.pagedjs_fiche_page.pagedjs_fiche_first_page.pagedjs_right_page + .pagedjs_blank_page .plus{
+	color: var(--pantone-one);
+}
+
+.pagedjs_fiche_first_page{
+	background: #FFF;
+	position: relative;
+}
+
+.pagedjs_fiche_first_page .plus{
 	color: var(--pantone-one);
 }
 
@@ -149,7 +197,7 @@
 /* Ajouter une page blanche avant chaque fiche */
 .fiche h4.edition-block-title{
 	font-size: 18pt;
-	break-before: right;
+	/*break-before: right;*/
 	width: 100%;
 	margin-left: 0;
 }
