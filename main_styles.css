@@ -277,10 +277,23 @@ figcaption,
 	line-height: 1.45;
 	font-size: 7pt;
 	text-align: left;
+	margin-top: -3mm;
 }
 
-sup.footnote{
+.footnote-ref{
+	text-decoration: none;
+	pointer-events: none; 
+}
+
+.footnote-ref sup{
 	font-size: 7pt;
+	pointer-events: none; 
+	margin-left: 2px;
+	
+}
+
+.note-call_footnote-p{
+	display: none;
 }
 
 /* ----------- RESSOURCES --------------- */

@@ -1,4 +1,7 @@
 /* --------------------------- PART THREE ------------------------------  */
+/* envoyer les titres courant pour cette partie */
+.pagedjs_titrepartiepart-three_page h2.edition-block-title {string-set: title content(text) }
+.pagedjs_part-three_page h3.edition-block-title {string-set: subtitle content(text) }
 
 /* Nommer la page pour styler les marges et numéros de pages */
 .part-three{
@@ -14,6 +17,7 @@
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
     color: var(--pantone-three);
+    content: string(title) ' -> ' string(subtitle);
   }
 }
 
@@ -26,8 +30,18 @@
 	background: var(--pantone-three);
 }
 
-.pagedjs_part-three_page.pagedjs_right_page ~ .pagedjs_blank_page{
+/*.pagedjs_part-three_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--pantone-three);
+}*/
+
+/* tentative de fixer le bug qui ne donne pas la classe .pagedjs_blank_page au page précédent les titres des articles*/
+.pagedjs_part-three_first_page{
+	background: var(--pantone-three);
+	position: relative;
+}
+
+.pagedjs_part-three_first_page .plus{
+	color: #FFF;
 }
 
 .part-three .content-ul li::before{
@@ -64,11 +78,11 @@
 }
 
 /* couleur des notes */
-.part-three .footnote-p {
+.pagedjs_part-one_page .footnote-p {
   color: var(--pantone-three);
 }
 
-.part-three sup.footnote{
+.pagedjs_part-three_page sup.footnote{
 	color: var(--pantone-three);
 }
 
@@ -90,9 +104,9 @@
 }
 
 /* Mise en page part-three */
-.part-three{
+/*.part-three{
 	break-before: page;
-}
+}*/
 
 
 

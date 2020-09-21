@@ -82,11 +82,11 @@
 }
 
 /* couleur des notes */
-.part-one .footnote-p {
+.pagedjs_part-one_page .footnote-p {
   color: var(--pantone-one);
 }
 
-.part-one sup.footnote{
+.pagedjs_part-one_page sup.footnote{
 	color: var(--pantone-one);
 }
 

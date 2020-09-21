@@ -1,4 +1,7 @@
 /* --------------------------- PART TWO ------------------------------  */
+/* envoyer les titres courant pour cette partie */
+.pagedjs_titrepartiepart-two_page h2.edition-block-title {string-set: title content(text) }
+.pagedjs_part-two_page h4.edition-block-title {string-set: subtitle content(text) }
 
 /* Nommer la page pour styler les marges et numéros de pages */
 .part-two{
@@ -14,6 +17,7 @@
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
     color: var(--pantone-two);
+    content: string(title) ' -> ' string(subtitle);	
   }
 }
 
@@ -22,12 +26,23 @@
 }
 
 /* couleur de la page précédente*/
+/* pour les interpages de titre de partie */
 .pagedjs_titrepartiepart-two_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--pantone-two);
 }
 
-.pagedjs_part-two_page.pagedjs_right_page ~ .pagedjs_blank_page{
+/*.pagedjs_part-two_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--pantone-two);
+}*/
+
+/* tentative de fixer le bug qui ne donne pas la classe .pagedjs_blank_page au page précédent les titres des articles*/
+.pagedjs_part-two_first_page{
+	background: var(--pantone-two);
+	position: relative;
+}
+
+.pagedjs_part-two_first_page .plus{
+	color: #FFF;
 }
 
 .part-two .content-ul li::before{
@@ -64,11 +79,11 @@
 }
 
 /* couleur des notes */
-.part-two .footnote-p {
+.pagedjs_part-two_page .footnote-p {
   color: var(--pantone-two);
 }
 
-.part-two sup.footnote{
+.pagedjs_part-two_page sup.footnote{
 	color: var(--pantone-two);
 }
 
@@ -80,7 +95,7 @@
 @page titrepartiepart-two{
 	background-color: var(--pantone-two);
 	@bottom-right-corner {
-   content: none;
+  	content: none;
  	}
 
 }
@@ -90,9 +105,9 @@
 }
 
 /* Mise en page part-two */
-.part-two{
+/*.part-two{
 	break-before: page;
-}
+}*/
 
 
 
@@ -134,8 +149,10 @@
 	page-break-after: always;
 }
 
+/* faire commencer les articles sur la page de droite */
 .controverse h4.edition-block-title{
 	page-break-before: always;
+	break-before: right;
 }
 
 .controverses .ressources{

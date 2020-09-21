@@ -49,7 +49,7 @@ class addPlus extends Paged.Handler {
   	pages.forEach(page => {
   		// console.log(page);
   		// Ajoute le nombre de plus correspondant au numéro de page positionné aléatoirement sur les interpages
-  		if(page.element.classList.contains('pagedjs_blank_page') || page.element.classList.contains('pagedjs_fiche_first_page') || page.element.classList.contains('pagedjs_part-one_first_page')){
+  		if(page.element.classList.contains('pagedjs_blank_page') || page.element.classList.contains('pagedjs_fiche_first_page') || page.element.classList.contains('pagedjs_part-one_first_page') || page.element.classList.contains('pagedjs_part-two_first_page') || page.element.classList.contains('pagedjs_part-three_first_page')){
 				var pageNumber = page.position + 1;
 				for(var i=0; i<=pageNumber; i++){
 					var plus = document.createElement("div");
@@ -229,6 +229,7 @@ class marginNotes extends Paged.Handler {
       let maxHeight = pageElement.querySelectorAll(".pagedjs_page_content")[0].offsetHeight;
 
       if (allHeight > maxHeight) {
+        console.log("doesn't fit");
 
         /* IF DOESN'T FIT ----------------------------------------------------------------------------- */
 
@@ -246,7 +247,7 @@ class marginNotes extends Paged.Handler {
         noteOverflow = true;
 
       } else {
-
+        console.log("fit");
         /* PUSH DOWN ---------------------------------------------------- */
         for (let i = 0; i < notes.length; ++i) {
           if (i >= 1) {
@@ -358,6 +359,7 @@ function toCamelClassNote(elem) {
   let classCamel = splitClass.reduce(reducer);
   return classCamel;
 }
+
 
 
 
