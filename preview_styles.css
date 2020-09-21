@@ -34,10 +34,17 @@
       margin-left: var(--pagedjs-width);
   }
 
-  .pagedjs_page:last-of-type{ 
+  .pagedjs_page:last-of-type{
       margin-bottom: 10mm;
   }
+  /*
+  .pagedjs_pagebox {
+        --pagedjs-baseline: 13.5pt;
+        --pagedjs-baseline-position: 10mm;
+        --pagedjs-baseline-color: cyan;
+        background: linear-gradient(var(--color-paper) 0%, var(--color-paper) calc(var(--pagedjs-baseline) - 1px), var(--pagedjs-baseline-color) calc(var(--pagedjs-baseline) - 1px), var(--pagedjs-baseline-color) var(--pagedjs-baseline)), transparent;
+        background-size: 100% var(--pagedjs-baseline);
+        background-repeat: repeat-y;
+        background-position-y: var(--pagedjs-baseline-position);
+    }*/
 }
-
-
-
