@@ -1,8 +1,12 @@
-# Liste des détails / particularités pour la mise en page avec pagedjs
+# FORCCAST - Controverses, Mode d'emploi 
+Publication du laboratoire de recherche FORCCAST, MédiaLab Sciences-Po
+La publication est entièrement réalisée avec des langages du web et le framework PagedJS
+
+## Documentation de PagedJS et des fonctionnalités utilisées 
 
 --> beaucoup d'exemple ici: https://gitlab.pagedmedia.org/tools/experiments
 
-## Ligne de base
+### Ligne de base
 --> https://gitlab.pagedmedia.org/tools/experiments/tree/master/baseline
 https://github.com/daneden/Baseline.js
 http://stephanecurzi.me/baselinecss.2009/
@@ -20,23 +24,23 @@ https://bohemianalps.com/tools/grid/
     }
 </pre>
 
-## Orphelines
+### Orphelines
 ??
 
-## Césure
+### Césure
 --> https://gitlab.pagedmedia.org/tools/experiments/tree/master/hyphens
 
-## Espaces insécables
+### Espaces insécables
 --> smartypants: https://daringfireball.net/projects/smartypants/
 
-## Notes dans la marges 
---> voir le fichier margin-notes.js
+### Notes dans la marges 
+--> voir le fichier margin-notes.js (intégrer désormais au fichier custom_scripts.js) 
 
-## Titre courant 
+### Titre courant 
 - https://www.pagedjs.org/documentation/07-generated-content-in-margin-boxes/#named-string-classical-running-headersfooters
 - https://www.pagedjs.org/documentation/07-generated-content-in-margin-boxes/#running-elements-headersfooter-with-specific-complex-content
 
-## Cibler une page en particulier
+### Cibler une page en particulier
 Utile pour les background 
 page référence: https://www.pagedmedia.org/pagedjs-sneak-peeks/
 
@@ -73,10 +77,12 @@ section.part {
 }
 ```
 
-## faire commencer une page sur la page de droite
+### Faire commencer une page sur la page de droite
+```
 .chapter {
   break-before: right;
 }
+
 
 
 
