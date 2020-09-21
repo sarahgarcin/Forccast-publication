@@ -1,50 +1,145 @@
+// ------ C R E A T E   S U B M E N U   B Y    P A R T   S C R I P T ----------
+
+class createSubMenu extends Paged.Handler {
+  constructor(chunker, polisher, caller) {
+    super(chunker, polisher, caller);
+  }  
+  beforeParsed(content){
+  // Créer un sous-menu automatiquement pour les parties 
+    let titresPartie = content.querySelectorAll('.titre-partie');
+    var elParent;
+    
+    titresPartie.forEach(titre => {
+      let allH3 = nextUntil(titre, '.titre-partie');
+      let indexUl = document.createElement("ul");
+      indexUl.classList.add("tableofcontents-block-title"); 
+      allH3.forEach(h3 => {
+        let indexLi = document.createElement("li");
+        indexLi.classList.add("list-index-element");
+        let h3Content = h3.querySelector('h3.edition-block-title');
+        if(h3Content != null){
+          indexLi.innerHTML = h3Content.innerHTML;
+          indexUl.appendChild(indexLi);
+          elParent = h3.closest(".is-level-1");
+        }
+      });
+      titre.appendChild(indexUl);
+    });
+
+
+  // Créer un sous-menu automatiquement pour les sous-parties
+    let sections = content.querySelectorAll('.is-level-1');
+    var elSubParent;
+    
+    sections.forEach(section => {
+      // console.log(section);
+      let allH4 = nextUntil(section, '.is-level-1');
+      let indexSubUl = document.createElement("ul");
+      indexSubUl.classList.add("tableofcontents-block-title"); 
+      allH4.forEach(h4 => {
+        let indexLi = document.createElement("li");
+        indexLi.classList.add("list-index-element");
+        let h4Content = h4.querySelector('h4.edition-block-title');
+        if(h4Content != null){
+          indexLi.innerHTML = h4Content.innerHTML;
+          indexSubUl.appendChild(indexLi);
+          elSubParent = h4.closest(".is-level-2");
+        }
+      });
+      ;
+      insertAfter(section.querySelector('h3.edition-block-title'), indexSubUl);
+    });
+  }
+
+}
+
+Paged.registerHandlers(createSubMenu);
+
+// FONCTIONS
+function insertAfter(referenceNode, newNode) {
+  referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+/*!
+ * Get all following siblings of each element up to but not including the element matched by the selector
+ * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * @param  {Node}   elem     The element
+ * @param  {String} selector The selector to stop at
+ * @param  {String} filter   The selector to match siblings against [optional]
+ * @return {Array}           The siblings
+ */
+var nextUntil = function (elem, selector, filter) {
+
+  // Setup siblings array
+  var siblings = [];
+
+  // Get the next sibling element
+  elem = elem.nextElementSibling;
+
+  // As long as a sibling exists
+  while (elem) {
+
+    // If we've reached our match, bail
+    if (elem.matches(selector)) break;
+
+    // If filtering by a selector, check if the sibling matches
+    if (filter && !elem.matches(filter)) {
+      elem = elem.nextElementSibling;
+      continue;
+    }
+
+    // Otherwise, push it to the siblings array
+    siblings.push(elem);
+
+    // Get the next sibling element
+    elem = elem.nextElementSibling;
+
+  }
+
+  return siblings;
+
+};
+
+var getPreviousSibling = function (elem, selector) {
+
+  // Get the next sibling element
+  var sibling = elem.previousElementSibling;
+
+  // If there's no selector, return the first sibling
+  if (!selector) return sibling;
+
+  // If the sibling matches our selector, use it
+  // If not, jump to the next sibling and continue the loop
+  while (sibling) {
+    if (sibling.matches(selector)) return sibling;
+    sibling = sibling.previousElementSibling;
+  }
+
+};
+
+var getNextSibling = function (elem, selector) {
+
+  // Get the next sibling element
+  var sibling = elem.nextElementSibling;
+
+  // If there's no selector, return the first sibling
+  if (!selector) return sibling;
+
+  // If the sibling matches our selector, use it
+  // If not, jump to the next sibling and continue the loop
+  while (sibling) {
+    if (sibling.matches(selector)) return sibling;
+    sibling = sibling.nextElementSibling
+  }
+
+};
+
+// ------------------ R A N D O M    P L U S   S C R I P T ----------------
+
 class addPlus extends Paged.Handler {
   constructor(chunker, polisher, caller) {
     super(chunker, polisher, caller);
   }
-  beforeParsed(content){
-  	// Créer un sous-menu automatiquement pour les parties 
-			// !!!!! ça ne maaaarche pas totalement il faut associer le menu à la bonne page  !!!!!!!
-  	let indexElements = content.querySelectorAll('h3.edition-block-title');
-    
-    let indexUl = document.createElement("ul");
-  	indexUl.classList.add("tableofcontents-block-title");
-
-    indexElements.forEach(el => {
-  		let indexLi = document.createElement("li");
-  		indexLi.classList.add("list-index-element");
-  		indexLi.innerHTML = el.innerHTML;
-  		indexUl.appendChild(indexLi);
-    });
-
-    let pagesTitre = content.querySelectorAll('.titre-partie');
-    pagesTitre.forEach(page => {
-    	page.appendChild(indexUl);
-    });
-
-    // Créer un sous-menu automatiquement pour les sous-parties faire une fonction !!!
-			// !!!!! ça ne maaaarche pas totalement il faut associer le menu à la bonne page !!!!!!!
-  	let indexSubElements = content.querySelectorAll('h4.edition-block-title');
-    
-    let indexSubUl = document.createElement("ul");
-  	indexSubUl.classList.add("tableofcontents-block-title");
-
-    indexSubElements.forEach(subEl => {
-    	console.log(subEl);
-  		let indexLi = document.createElement("li");
-  		indexLi.classList.add("list-index-element");
-  		indexLi.innerHTML = subEl.innerHTML;
-  		indexSubUl.appendChild(indexLi);
-    });
-    console.log(indexSubUl);
-
-    let pagesSubTitre = content.querySelectorAll('h3.edition-block-title');
-    pagesSubTitre.forEach(page => {
-    	page.after(indexSubUl);
-    });
-
-  }
-
   afterRendered(pages){
   	pages.forEach(page => {
   		// console.log(page);
@@ -77,26 +172,10 @@ class addPlus extends Paged.Handler {
 					plusContainer.appendChild(plus);
 				}
 			}
-			// Créer un sous-menu automatiquement pour les parties 
-			// !!!!! ça ne marche paaaaas !!!!!!!
-			// var subtitleContent;
-			// if(page.element.classList.contains('pagedjs_part-one_page')){
-			// 	subtitleContent = page.element.querySelector('h3.edition-block-title').innerHTML;
-			// 	console.log(subtitleContent);
-			// }
-			// if(page.element.classList.contains('pagedjs_titrepartiepart-one_page')){
-			// 	var subMenuContainer = document.createElement("div");
-			// 	subMenuContainer.classList.add("tableofcontents-block-title");
-			// 	var ul = document.createElement("ul");
-			// 	ul.appendChild(subtitleContent);
-			// 	subMenuContainer.appendChild(ul);
-			// 	console.log(subMenuContainer);
-			// 	page.element.appendChild(subMenuContainer);
-			// }
-
   	});
   }
 }  
+
 
 
 Paged.registerHandlers(addPlus);
