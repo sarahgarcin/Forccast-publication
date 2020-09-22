@@ -1,6 +1,7 @@
 /* --------------------------- PART ONE ------------------------------  */
 /* envoyer les titres courant pour cette partie */
-.pagedjs_titrepartiepart-one_page h2.edition-block-title {string-set: title content(text) }
+.pagedjs_titrepartiepart-one_page h2.edition-block-title {string-set: onetitle content(text) }
+.pagedjs_part-one_page h3.edition-block-title {string-set: onesubtitle content(text) }
 /*h3.edition-block-title {string-set: subtitle content(text) }*/
 
 /* Nommer la page pour styler les marges et numéros de pages */
@@ -17,7 +18,7 @@
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
     color: var(--pantone-one);
-    content: string(title);
+    content: string(onetitle) ' -> ' string(onesubtitle);
   }
 }
 
@@ -82,11 +83,11 @@
 }
 
 /* couleur des notes */
-.pagedjs_part-one_page .footnote-p {
+.pagedjs_part-one_page .footnote-p, .pagedjs_fiche_page .footnote-p{
   color: var(--pantone-one);
 }
 
-.pagedjs_part-one_page sup.footnote{
+.pagedjs_part-one_page sup.footnote, .pagedjs_fiche_page sup.footnote{
 	color: var(--pantone-one);
 }
 
@@ -118,6 +119,9 @@
 
 
 /* ----------- PERSPECTIVES / FICHES / FICHE --------------- */
+.pagedjs_fiche_page h4.edition-block-title {string-set: onesubsubtitle content(text) }
+
+
 /* Nommer la page fiche pour créer des interpages avec fond blanc et plus vert*/
 .fiche{
    page: fiche;
@@ -131,6 +135,7 @@
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
     color: var(--pantone-one);
+    content: string(onesubtitle) ' -> ' string(onesubsubtitle);
   }
 }
 

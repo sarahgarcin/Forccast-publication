@@ -1,7 +1,7 @@
 /* --------------------------- PART TWO ------------------------------  */
 /* envoyer les titres courant pour cette partie */
-.pagedjs_titrepartiepart-two_page h2.edition-block-title {string-set: title content(text) }
-.pagedjs_part-two_page h4.edition-block-title {string-set: subtitle content(text) }
+.pagedjs_titrepartiepart-two_page h2.edition-block-title {string-set: twotitle content(text) }
+.pagedjs_part-two_page h4.edition-block-title {string-set: twosubtitle content(text) }
 
 /* Nommer la page pour styler les marges et numéros de pages */
 .part-two{
@@ -17,7 +17,7 @@
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
     color: var(--pantone-two);
-    content: string(title) ' -> ' string(subtitle);	
+    content: string(twotitle) ' -> ' string(twosubtitle);	
   }
 }
 
