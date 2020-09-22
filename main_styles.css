@@ -342,13 +342,13 @@ figcaption,
 
  /* INTERPAGES TITRE PARTIE */
 .titre-partie h2.edition-block-title{
-	font-size:40pt;
-	margin:0;
+	font-size:46pt;
+	margin:0 0 0 -4px;
 	font-weight: normal;
 	color: #FFF;
 	position: absolute;
-	top: 0cm;
-	left: -3cm;
+	top: -0.30cm;
+	left: -4cm;
 	text-transform: uppercase;
 	text-align: center;
 	text-align-last: center;
@@ -357,7 +357,7 @@ figcaption,
 /* Mise en page du sommaire des thématiques*/
 .tableofcontents-block-title{
 	font-size: 18pt;
-	font-weight: 500;
+	font-weight: 400;
 	color: #FFF;
 	width: 100%;
 	position: absolute;
@@ -367,17 +367,23 @@ figcaption,
 	text-align: center;
 	text-align-last: center;
 	line-height: 1;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.02em;
 	break-after: always;
-	margin:0;
+	margin:1px;
+	 /*font-family: 'YoungSerif';*/
 }
 
 .tableofcontents-block-title li{
 	display: inline-block;
 	text-align: center;
-	margin-left: 0.2cm;
+	margin-left: 1mm;
+	margin-right: 1mm;
+	margin-bottom: 2mm;
 }
 
 .tableofcontents-block-title li::before{
-	content:' + ';
+	content:' +';
+	 font-weight:800;
+	  font-family: var(--font-text);
+	  margin-right:4px;
 }
