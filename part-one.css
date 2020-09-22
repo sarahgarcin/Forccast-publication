@@ -98,7 +98,7 @@
 @page titrepartiepart-one{
 	background-color: var(--pantone-one);
 	@bottom-right-corner {
-   content: none;
+  	content: none;
  	}
 
 }

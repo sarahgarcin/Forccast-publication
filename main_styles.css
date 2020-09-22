@@ -31,8 +31,8 @@ h1 {
 }
 
 /*permet d'envoyer cet élément dans le titre courant*/
-h2.edition-block-title {string-set: title content(text) }
-h3.edition-block-title {string-set: subtitle content(text) }
+/*h2.edition-block-title {string-set: title content(text) }
+h3.edition-block-title {string-set: subtitle content(text) }*/
 /*h4.edition-block-title {string-set: subtitle content(text) }*/
 
 h1, h2, h3, h4, h5, h6{
@@ -76,7 +76,7 @@ u{
 
  	/*titre courant*/
  	@bottom-left {
- 		content: string(title) ' -> ' string(subtitle);
+ 		/*content: string(title) ' -> ' string(subtitle);*/
     font-size: 9pt;
    	font-weight: bold;
   }
