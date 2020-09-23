@@ -126,28 +126,31 @@
 .controverses{
 	break-before: page;
 }
+/* Menu / Sommaire pour chaque thème */
 
-.controverses .tableofcontents-block-title{
-	position: relative;
-	top: 0;
-	left:0;
-	width: 140%;
-	margin-left: -40%;
-	color: var(--pantone-two);
-	font-size: 11pt;
-	text-align: left;
-	text-align-last: left;
-	margin-top: 0.5cm;
-	page-break-after:auto;
+.controverses .tableofcontents-block-title {
+ position:relative;
+ top:0;
+ left:0;
+ width:140%;
+ color:var(--pantone-two);
+ font-size:13pt;
+ text-align:left;
+ text-align-last:left;
+ margin:0.6cm 0 0.6cm -47.3%;
 }
-.controverses .tableofcontents-block-title ul{
-	padding:0;
+.controverses .tableofcontents-block-title ul {
+ padding:0
 }
-
-.controverses .tableofcontents-block-title li{
-	display: block;
-	margin-bottom: 0.2cm;
+.controverses .tableofcontents-block-title li {
+ display:block;
+ color:black; /* color:var(-pantone-two); si texte noir */
+ margin-bottom:0.15cm
 }
+.controverses .tableofcontents-block-title li::before{
+ color:var(--pantone-two);
+}
+/* FIN Menu / Sommaire pour chaque thème */
 
 .controverses .content-p{
 	font-style: italic;

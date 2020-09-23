@@ -183,26 +183,27 @@
 }
 
 /* Menu / Sommaire pour chaque thème */
-.fiches .tableofcontents-block-title{
-	position: relative;
-	top: 0;
-	left:0;
-	width: 140%;
-	margin-left: -40%;
-	color: var(--pantone-one);
-	font-size: 11pt;
-	text-align: left;
-	text-align-last: left;
-	margin-top: 0.5cm;
-	page-break-after:auto;
+.fiches .tableofcontents-block-title {
+ position:relative;
+ top:0;
+ left:0;
+ width:140%;
+ color:var(--pantone-one);
+ font-size:13pt;
+ text-align:left;
+ text-align-last:left;
+ margin:0.6cm 0 0.6cm -47.3%;
 }
-.fiches .tableofcontents-block-title ul{
-	padding:0;
+.fiches .tableofcontents-block-title ul {
+ padding:0
 }
-
-.fiches .tableofcontents-block-title li{
-	display: block;
-	margin-bottom: 0.2cm;
+.fiches .tableofcontents-block-title li {
+ display:block;
+ color:black; /* color:var(-pantone-one); si texte noir */
+ margin-bottom:0.15cm
+}
+.fiches .tableofcontents-block-title li::before{
+ color:var(--pantone-one);
 }
 
 /* fin Menu / Sommaire pour chaque thème */
