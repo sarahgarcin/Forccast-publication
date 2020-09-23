@@ -319,27 +319,29 @@ figcaption,
 
 /* ----------- RESSOURCES --------------- */
 
-.ressources-title{
-	page-break-before:always;
-	width: 140%;
-	margin-left: -40%;
-	margin-top: 0;
+.ressources-title {
+	page-break-before: always;
+ width:140%;
+ margin-left:-37.5%;
+ margin-top:0
 }
-
-.ressources{
-	column-count: 2;
-	column-gap: 1cm;
-	column-fill: auto;
-	width: 140%;
-	margin-left: -40%;
-	padding: 0;
-	line-height: 13.5pt;
+.ressources {
+ column-count:2;
+ column-gap:1cm;
+ column-fill:auto;
+ width:140%;
+ margin-left:-40%;
+ padding:0;
+ line-height:13.5pt
 }
-.ressources li:first-child{
-	margin-top: 0;
+.ressources ul{
+  margin-left: 100%;
 }
-.ressources li{
-	margin:13.5pt 0;
+.ressources li:first-child {
+ margin-top:0
+}
+.ressources li {
+ margin:13.5pt 0 13.5pt 3.8%;
 }
 
 /* ----------- INTERPAGES --------------- */
