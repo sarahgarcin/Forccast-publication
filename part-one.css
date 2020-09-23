@@ -53,12 +53,20 @@
 	color: var(--pantone-one);
 }
 
+.part-one .content-ol li::marker {
+  color: var(--pantone-one);
+}
+
+.part-one .content-ol li::before{
+	color: var(--pantone-one);
+}
+
 .part-one .content-figure figure{
 	background: var(--pantone-one);
 }
 
 .part-one figcaption,
-.part-one .contents-container figcaption, 
+.part-one .contents-container figcaption,
 .part-one .contents-container figcaption p{
 	color: var(--pantone-one);
 }
@@ -74,9 +82,9 @@
 }
 
 /* couleur des titres dans le texte*/
-.part-one .contents-container h1, 
-.part-one .contents-container h2, 
-.part-one .contents-container h3, 
+.part-one .contents-container h1,
+.part-one .contents-container h2,
+.part-one .contents-container h3,
 .part-one .contents-container h4,
 .part-one .contents-container h5{
 	color: var(--pantone-one);
@@ -176,7 +184,7 @@
 
 /* Menu / Sommaire pour chaque thème */
 .fiches .tableofcontents-block-title{
-	position: relative; 
+	position: relative;
 	top: 0;
 	left:0;
 	width: 140%;
@@ -184,7 +192,7 @@
 	color: var(--pantone-one);
 	font-size: 11pt;
 	text-align: left;
-	text-align-last: left; 
+	text-align-last: left;
 	margin-top: 0.5cm;
 	page-break-after:auto;
 }
@@ -225,4 +233,3 @@
 }
 
 /* --------------------------- FIN PART ONE ------------------------------  */
-

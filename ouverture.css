@@ -5,7 +5,7 @@
 }
 
 /* Nommer le titre pour les titres courant*/
-.ouverture .edition-block-title {  
+.ouverture .edition-block-title {
 	string-set: title content(text);
 }
 
@@ -31,12 +31,20 @@
 	color: var(--noir);
 }
 
+.ouverture .content-ol li::marker {
+  color: var(--noir);
+}
+
+.ouverture .content-ol li::before{
+	color: var(--noir);
+}
+
 .ouverture .content-figure figure{
 	background: var(--noir);
 }
 
 .ouverture figcaption,
-.ouverture .contents-container figcaption, 
+.ouverture .contents-container figcaption,
 .ouverture .contents-container figcaption p{
 	color: var(--noir);
 }
@@ -52,9 +60,9 @@
 }
 
 /* couleur des titres dans le texte*/
-.ouverture .contents-container h1, 
-.ouverture .contents-container h2, 
-.ouverture .contents-container h3, 
+.ouverture .contents-container h1,
+.ouverture .contents-container h2,
+.ouverture .contents-container h3,
 .ouverture .contents-container h4{
 	color: var(--noir);
 }

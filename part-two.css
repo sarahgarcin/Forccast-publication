@@ -17,7 +17,7 @@
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
     color: var(--pantone-two);
-    content: string(twotitle) ' -> ' string(twosubtitle);	
+    content: string(twotitle) ' -> ' string(twosubtitle);
   }
 }
 
@@ -49,12 +49,20 @@
 	color: var(--pantone-two);
 }
 
+.part-two .content-ol li::marker {
+  color: var(--pantone-two);
+}
+
+.part-two .content-ol li::before{
+	color: var(--pantone-two);
+}
+
 .part-two .content-figure figure{
 	background: var(--pantone-two);
 }
 
 .part-two figcaption,
-.part-two .contents-container figcaption, 
+.part-two .contents-container figcaption,
 .part-two .contents-container figcaption p{
 	color: var(--pantone-two);
 }
@@ -70,9 +78,9 @@
 }
 
 /* couleur des titres dans le texte*/
-.part-two .contents-container h1, 
-.part-two .contents-container h2, 
-.part-two .contents-container h3, 
+.part-two .contents-container h1,
+.part-two .contents-container h2,
+.part-two .contents-container h3,
 .part-two .contents-container h4,
 .part-two .contents-container h5{
 	color: var(--pantone-two);
@@ -120,7 +128,7 @@
 }
 
 .controverses .tableofcontents-block-title{
-	position: relative; 
+	position: relative;
 	top: 0;
 	left:0;
 	width: 140%;
@@ -128,7 +136,7 @@
 	color: var(--pantone-two);
 	font-size: 11pt;
 	text-align: left;
-	text-align-last: left; 
+	text-align-last: left;
 	margin-top: 0.5cm;
 	page-break-after:auto;
 }

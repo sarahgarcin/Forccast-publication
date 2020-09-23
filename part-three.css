@@ -48,12 +48,21 @@
 	color: var(--pantone-three);
 }
 
+.part-three .content-ol li::marker {
+  color: var(--pantone-three);
+}
+
+.part-three .content-ol li::before{
+	color: var(--pantone-three);
+}
+
+
 .part-three .content-figure figure{
 	background: var(--pantone-three);
 }
 
 .part-three figcaption,
-.part-three .contents-container figcaption, 
+.part-three .contents-container figcaption,
 .part-three .contents-container figcaption p{
 	color: var(--pantone-three);
 }
@@ -69,9 +78,9 @@
 }
 
 /* couleur des titres dans le texte*/
-.part-three .contents-container h1, 
-.part-three .contents-container h2, 
-.part-three .contents-container h3, 
+.part-three .contents-container h1,
+.part-three .contents-container h2,
+.part-three .contents-container h3,
 .part-three .contents-container h4,
 .part-three .contents-container h5{
 	color: var(--pantone-three);
@@ -119,15 +128,15 @@
 }
 
 .enquetes .tableofcontents-block-title{
-	position: relative; 
+	position: relative;
 	top: 0;
 	left:0;
 	width: 140%;
 	margin-left: -40%;
-	
+
 	font-size: 11pt;
 	text-align: left;
-	text-align-last: left; 
+	text-align-last: left;
 	margin-top: 0.5cm;
 	page-break-after:auto;
 }
@@ -221,6 +230,6 @@
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
     color: var(--pantone-three);
-    background-color: #FFF;	
+    background-color: #FFF;
   }
 }

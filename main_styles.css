@@ -43,7 +43,8 @@ h1, h2, h3, h4, h5, h6{
 
 ul li{
 	list-style: none;
-	margin-bottom: 5mm;
+	line-height:13.5pt;
+ margin-bottom: 0mm;
 	text-align: left;
 }
 
@@ -55,6 +56,22 @@ ul > li > ul > li::before{
 	content: "+";
 	margin-left: -3mm;
 	margin-right: 1mm;
+}
+
+@counter-style plusplus {
+  system: symbolic;
+  symbols: '+';
+	  suffix: " ";
+}
+ol li{
+	list-style: plusplus;
+	line-height:13.5pt;
+ 	margin-bottom: 0mm;
+	text-align: left;
+}
+
+ol > li > ol {
+	padding-left: 3mm;
 }
 
 u{
