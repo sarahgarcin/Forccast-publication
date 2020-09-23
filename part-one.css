@@ -12,7 +12,7 @@
 /* ----- PART ONE COLORS --------*/
 @page part-one{
   /* couleur des numéros de page*/
-  @bottom-right-corner {
+  @bottom-right {
    color: var(--pantone-one);
  	}
  	/* contenu titre courant et couleur du titre courant */
@@ -98,7 +98,7 @@
 
 @page titrepartiepart-one{
 	background-color: var(--pantone-one);
-	@bottom-right-corner {
+	@bottom-right {
   	content: none;
  	}
 
@@ -129,7 +129,7 @@
 
 @page fiche{
   /* couleur des numéros de page*/
-  @bottom-right-corner {
+  @bottom-right {
    color: var(--pantone-one);
  	}
  	/* contenu titre courant et couleur du titre courant */
@@ -147,7 +147,7 @@
 
 @page firstpage{
   /* couleur des numéros de page*/
-  @bottom-right-corner {
+  @bottom-right {
    content:none;
  	}
  	/* contenu titre courant et couleur du titre courant */

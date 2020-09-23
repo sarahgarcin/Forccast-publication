@@ -29,7 +29,7 @@
 }
 
 @page citation {
-	@bottom-right-corner {
+	@bottom-right {
   	content: none;
   }
 }

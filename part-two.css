@@ -11,7 +11,7 @@
 /* ----- PART TWO COLORS --------*/
 @page part-two{
   /* couleur des numéros de page*/
-  @bottom-right-corner {
+  @bottom-right {
    color: var(--pantone-two);
  	}
  	/* contenu titre courant et couleur du titre courant */
@@ -94,7 +94,7 @@
 
 @page titrepartiepart-two{
 	background-color: var(--pantone-two);
-	@bottom-right-corner {
+	@bottom-right {
   	content: none;
  	}
 

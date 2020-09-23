@@ -11,7 +11,7 @@
 /* ----- PART THREE COLORS --------*/
 @page part-three{
   /* couleur des numéros de page*/
-  @bottom-right-corner {
+  @bottom-right {
    color: var(--pantone-three);
  	}
  	/* contenu titre courant et couleur du titre courant */
@@ -93,7 +93,7 @@
 
 @page titrepartiepart-three{
 	background-color: var(--pantone-three);
-	@bottom-right-corner {
+	@bottom-right {
    content: none;
  	}
 
@@ -214,7 +214,7 @@
 
 @page tutoriel{
   /* couleur des numéros de page*/
-  @bottom-right-corner {
+  @bottom-right {
    color: var(--pantone-three);
    background-color: #FFF;
  	}
