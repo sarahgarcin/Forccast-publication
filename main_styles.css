@@ -17,7 +17,7 @@ body{
 	font-size: 11pt;
 	text-align: justify;
 	text-align-last: left;
-	hyphens: auto;
+	-webkit-hyphens: auto;
 }
 
 img{
@@ -196,6 +196,9 @@ u{
 
 /* marge sur les paragraphes */
 .content-p {
+	hyphens: auto;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
 	margin: 13.5pt 0;
 	line-height: 13.5pt;
 }

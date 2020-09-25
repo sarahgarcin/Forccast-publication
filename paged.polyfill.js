@@ -1964,7 +1964,7 @@
 			this.layoutMethod = new Layout(this.area, this.hooks, maxChars);
 
 			let newBreakToken = await this.layoutMethod.renderTo(this.wrapper, contents, breakToken);
-			
+
 			this.addListeners(contents);
 
 			this.endToken = newBreakToken;
@@ -23447,7 +23447,7 @@
 	    parse: function() {
 	        var children = this.createList();
 
-	        
+
 	        while (!this.scanner.eof) {
 	            switch (this.scanner.tokenType) {
 	                case WHITESPACE$6:
@@ -24331,7 +24331,7 @@
 	        var children = this.createList();
 	        var child;
 
-	        
+
 	        while (!this.scanner.eof) {
 	            switch (this.scanner.tokenType) {
 	                case WHITESPACE$8:
@@ -27325,7 +27325,7 @@ img {
 						}
 					});
 					list.append(bVar, item);
-				}	
+				}
 
 			}
 		}
@@ -29326,7 +29326,7 @@ img {
 		onRule(ruleNode, ruleItem, rulelist) {
 			let selector = lib.generate(ruleNode.prelude);
 			if (selector.match(/:(first|last|nth)-of-type/)) {
-				
+
 				let declarations = lib.generate(ruleNode.block);
 				declarations = declarations.replace(/[{}]/g,"");
 
@@ -29381,7 +29381,7 @@ img {
 		onRule(ruleNode, ruleItem, rulelist) {
 			let selector = lib.generate(ruleNode.prelude);
 			if (selector.match(/\+/)) {
-				
+
 				let declarations = lib.generate(ruleNode.block);
 				declarations = declarations.replace(/[{}]/g,"");
 
@@ -29684,11 +29684,11 @@ img {
 
 			this.stringSetSelectors = {};
 			this.type;
-			// pageLastString = last string variable defined on the page 
+			// pageLastString = last string variable defined on the page
 			this.pageLastString;
 
 		}
-		
+
 		onDeclaration(declaration, dItem, dList, rule) {
 			if (declaration.property === "string-set") {
 				let selector = lib.generate(rule.ruleNode.prelude);
@@ -29731,69 +29731,69 @@ img {
 
 		afterPageLayout(fragment) {
 
-		
+
 			if ( this.pageLastString === undefined )
 			{
 				this.pageLastString = {};
 			}
-		
+
 			// get the value of the previous last string
 			for (let name of Object.keys(this.stringSetSelectors)) {
-		
+
 				let set = this.stringSetSelectors[name];
 				let selected = fragment.querySelectorAll(set.selector);
-		
+
 				// let cssVar = previousPageLastString;
 				// Get the last found string for the current identifier
 				let cssVar = ( name in this.pageLastString ) ? this.pageLastString[name] : "";
-		
+
 				selected.forEach((sel) => {
 					// push each content into the array to define in the variable the first and the last element of the page.
-		
-		
+
+
 					//this.pageLastString = selected[selected.length - 1].textContent;
 					// Index by identifier
 					this.pageLastString[name] = selected[selected.length - 1].textContent;
-		
-					
+
+
 					if (this.type === "first") {
 						cssVar = selected[0].textContent;
-					} 
-					
+					}
+
 					else if (this.type === "last") {
 						cssVar = selected[selected.length - 1].textContent;
-					} 
-					
+					}
+
 					else if (this.type === "start") {
-					
+
 						if (sel.parentElement.firstChild === sel) {
 							cssVar = sel.textContent;
 						}
 					}
-		
+
 					else if (this.type === "first-except") {
 						cssVar = "";
 					}
-		
+
 					else {
 						cssVar = selected[0].textContent;
-					} 
-				});	
-		
+					}
+				});
+
 				fragment.setAttribute("data-string", `string-type-${this.type}-${name}`);
-		
-		
+
+
 				// fragment.style.setProperty(`--pagedjs-string-${name}`, `"${cssVar.replace(/\\([\s\S])|(["|'])/g, "\\$1$2")}"`);
 				fragment.style.setProperty(`--pagedjs-string-${name}`, `"${cleanPseudoContent(cssVar)}`);
-			
+
 				// if there is no new string on the page
 				if (!fragment.hasAttribute("data-string")) {
 					fragment.style.setProperty(`--pagedjs-string-${name}`, `"${this.pageLastString}"`);
-				}	
-		
+				}
+
 			}
 		}
-		
+
 
 	}
 
@@ -30032,7 +30032,7 @@ img {
 							if (split.length > 1) {
 								psuedo += "::" + split[1];
 							}
-							
+
 							if (target.style === "before" || target.style === "after") {
 								const pseudoType = `${target.style}Content`;
 								textContent = cleanPseudoContent(this[pseudoType]);
@@ -31013,7 +31013,7 @@ img {
 	});
 
 	let config = window.PagedConfig || {
-		auto: true,
+		auto: false,
 		before: undefined,
 		after: undefined,
 		content: undefined,
