@@ -162,8 +162,8 @@ u{
 
 .contents-container h1{
 	font-size: 18pt;
-	margin-top: -6.75pt;
-	margin-bottom: 12pt;
+	margin-top:22mm;
+	margin-bottom: 10.25pt;
 }
 
 .contents-container h1::before{
@@ -183,7 +183,7 @@ u{
 }
 
 .content-p +  h2, .content-atomic-container + h2, .content-ul + h2{
-	margin-top: 1.44cm;
+	margin-top: 2mm;
 }
 
 .contents-container h1 + .content-p{
@@ -193,7 +193,10 @@ u{
 .contents-container h2 + .content-p{
 	margin-top: 13.5pt;
 }
-
+.contents-container h1:first-child{
+		margin-top: 0px;
+		margin-bottom: -0.75pt;
+}
 /* marge sur les paragraphes */
 .content-p {
 	hyphens: auto;
@@ -201,6 +204,8 @@ u{
 	-moz-hyphens: auto;
 	margin: 13.5pt 0;
 	line-height: 13.5pt;
+	widows: 4;
+	orphans: 3;
 }
 
 /* ------------ FIN GÉNÉRAL ------------  */
