@@ -58,20 +58,24 @@ ul > li > ul > li::before{
 	margin-right: 1mm;
 }
 
-@counter-style plusplus {
-  system: symbolic;
-  symbols: '+';
-	  suffix: " ";
-}
+
 ol li{
-	list-style: plusplus;
+	list-style: none;
 	line-height:13.5pt;
  	margin-bottom: 0mm;
-	text-align: left;
+	text-align: justify;
+	hyphens: auto;
 }
 
 ol > li > ol {
 	padding-left: 3mm;
+}
+
+ol > li::before{
+	content: "+";
+	font-weight: bold;
+	margin-left: -3mm;
+	margin-right: 1mm;
 }
 
 u{
@@ -197,6 +201,12 @@ u{
 		margin-top: 0px;
 		margin-bottom: -0.75pt;
 }
+.contents-container .content-p:first-child{
+	margin-top: 0px;
+}
+.contents-container .content-p:last-child{
+	margin-bottom: 0px;
+}
 /* marge sur les paragraphes */
 .content-p {
 	hyphens: auto;
@@ -204,7 +214,7 @@ u{
 	-moz-hyphens: auto;
 	margin: 13.5pt 0;
 	line-height: 13.5pt;
-	widows: 4;
+	widows: 2;
 	orphans: 3;
 }
 
