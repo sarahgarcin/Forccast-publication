@@ -1,0 +1,206 @@
+@media print{
+
+    #list-toc-generated{ list-style: none;
+    margin-left: -40%;
+    overflow-y: hidden;}
+
+    #list-toc-generated .toc-element a::before,
+    .pagedjs_left_page #list-toc-generated .toc-element-level-1:first-child a::before{
+        content: target-counter(attr(href), page);
+        float: left;
+        margin-right: 2cm;
+        width:0.5cm;
+        font-family: 'HK Grotesk';
+        font-size: 11pt;
+        font-weight: bold;
+        color: var(--noir);
+    }
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:first-child a{
+      display: none;
+    }
+
+
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(25) a{
+      text-indent: 50mm hanging;
+    }
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(-n+2) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(23) a,
+    .pagedjs_left_page #list-toc-generated .toc-element-level-1 a{
+        margin-top: 6px;
+        font-size: 14pt;
+        font-weight: bold;
+        font-family: 'YoungSerif';
+    }
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(3) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(4) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(15) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(23) a{
+        margin-top: 6px;
+        font-size: 14pt;
+        font-weight: bold;
+        font-family: 'YoungSerif';
+    }
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(5) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(9) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(13) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(16) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(22) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(24) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(27) a
+    {
+      margin-top: 6px;
+      font-size: 12pt;
+      font-weight: bold;
+      font-family: 'HK Grotesk';
+    }
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(6) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(7) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(8) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(9) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(11) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(12) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(13) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(14) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(18) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(19) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(20) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(21) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(22) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(25) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(26) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(28) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(29) a
+    {
+      margin-top: 4px;
+      font-size: 12pt;
+      font-weight: medium;
+      font-family: 'HK Grotesk';
+    }
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(6) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(7) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(8) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(10) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(11) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(12) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(14) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(17) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(18) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(19) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(20) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(21) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(25) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(26) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(28) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(29) a::before{
+      margin-left: 25mm;
+    }
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(5) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(9) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(13) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(16) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(22) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(24) a::before,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(27) a::before
+    {
+      margin-right: 30mm;
+    }
+    /*.pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(23) {
+      margin-bottom: 4cm;
+    }*/
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1 a,
+    .pagedjs_left_page #list-toc-generated .toc-element-level-1 a{
+      color:var(--noir);
+    }
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(4) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(5) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(6) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(7) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(8) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(9) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(10) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(11) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(12) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(13) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(14) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(15) a
+    {
+      color: var(	--pantone-one);
+    }
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(15) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(17) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(16) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(18) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(19) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(20) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(21) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(22) a
+    {
+      color: var(--pantone-two);
+    }
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(23) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(24) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(25) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(26) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(27) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(28) a,
+    .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(29) a{
+      color: var(--pantone-three);
+    }
+
+    /* target-text(attr(href), before) doesn't work for now, replace with counters (see below)*/
+    /* #list-toc-generated .toc-element a::before{
+        content: target-text(attr(href), before);
+    } */
+
+    /* counters */
+
+    #list-toc-generated{
+        counter-reset: counterTocLevel1;
+    }
+
+    #list-toc-generated .toc-element-level-1{
+        counter-increment: counterTocLevel1;
+        counter-reset: counterTocLevel2;
+    }
+
+    #list-toc-generated .toc-element-level-2{
+        counter-increment: counterTocLevel2;
+    }
+
+
+
+    /*  leader() doesn't work for now, replace with the hack bellow */
+    /* #list-toc-generated .toc-element a::after{
+        content: leader('.') " p. " target-counter(attr(href), page);
+        float: right;
+    } */
+
+    /* hack for leaders */
+
+    #list-toc-generated{
+        overflow-x: hidden;
+    }
+
+    #list-toc-generated .toc-element::after{
+        float: left;
+        width: 0;
+        padding-left: 5px;
+        letter-spacing: 2px;
+    }
+
+    #list-toc-generated .toc-element{
+        display: flex;
+    }
+
+    #list-toc-generated .toc-element a::after{
+        position: absolute;
+        right: 0;
+        background-color: white;
+        padding-left: 6px;
+    }
+
+    #list-toc-generated .toc-element a{
+        right: 0;
+    }
+
+}

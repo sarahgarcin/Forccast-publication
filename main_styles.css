@@ -7,9 +7,15 @@
 @import 'part-one.css';
 @import 'part-two.css';
 @import 'part-three.css';
+@import 'table-of-content.css';
 
-
-
+.edition-block-title.title-element{
+	break-after: avoid;
+	break-before: avoid;
+}
+a{
+	text-decoration: none;
+}
 /* ------------------------- MAIN STYLE ---------------------------- */
 
 body{
@@ -350,7 +356,8 @@ figcaption,
  width:140%;
  margin-left:-40%;
  padding:0;
- line-height:13.5pt
+ line-height:13.5pt;
+column-span : none;
 }
 .ressources ul{
   margin-left: 100%;
