@@ -343,30 +343,34 @@ figcaption,
 
 /* ----------- RESSOURCES --------------- */
 
-.ressources-title {
+.ressources-title,.glossary h2,.references h2,.table-of-figures h2  {
 	page-break-before: always;
  width:140%;
  margin-left:-37.5%;
- margin-top:0
+ margin-top:0;
+ font-size: 11pt;
 }
-.ressources {
+.glossary h2,.references h2,.table-of-figures h2{
+	margin-left:-42.5%;
+
+}
+.ressources, .figures-list {
  column-count:2;
  column-gap:1cm;
  column-fill:auto;
- width:140%;
  margin-left:-40%;
  padding:0;
  line-height:13.5pt;
-column-span : none;
+ column-span : none;
+ height: 17cm;
 }
 .ressources ul{
-  margin-left: 100%;
 }
-.ressources li:first-child {
+.ressources li:first-child, .figures-list li:first-child {
  margin-top:0
 }
-.ressources li {
- margin:13.5pt 0 13.5pt 3.8%;
+.ressources li, .figures-list li {
+ margin:13.5pt 0 13.5pt 0;
 }
 
 /* ----------- INTERPAGES --------------- */
