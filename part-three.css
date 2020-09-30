@@ -186,7 +186,12 @@
 	margin-top: 0;
 	page-break-before: always;
 }*/
-
+.tutoriel-wrapper h2.tutoriel-title em{
+  font-family: "HK Grotesk";
+  font-weight: bolder;
+  font-size: 14pt;
+    font-style: normal;
+}
 .contents-container h2.tutoriel-title{
 	margin-top: 0;
 	margin-bottom: 0.5cm;
