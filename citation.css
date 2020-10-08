@@ -3,13 +3,17 @@
 	color: var(--noir);
 }
 
+.citation .contents-container {
+  margin-top: 0;
+}
+
 .citation .edition-block-title{
 	display: none;
 }
 
 .citation .content-p {
 	font-family: var(--font-title);
-	font-size: 61pt; 
+	font-size: 56pt; 
 	text-align: left; 
 	width:130%;
 	margin-left: -35%;
