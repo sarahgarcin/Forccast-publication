@@ -8,6 +8,7 @@
 @import 'part-two.css';
 @import 'part-three.css';
 @import 'table-of-content.css';
+@import 'blank_page.css';
 
 .edition-block-title.title-element{
 	break-after: avoid;
@@ -99,11 +100,13 @@ u{
    content: counter(page);
    font-size: 9pt;
    font-weight: bold;
+   text-align: right;
+   float: right;
  	}
 
  	/*titre courant*/
  	@bottom-left {
- 		/*content: string(title) ' -> ' string(subtitle);*/
+ 		content: '';
     font-size: 9pt;
    	font-weight: bold;
   }
@@ -153,7 +156,7 @@ u{
 }
 
 .tableofcontents-block-title{
-	break-after: always;
+	/*break-after: always;*/
 }
 
 /* container de texte */
@@ -201,7 +204,7 @@ u{
 }
 
 .contents-container h2 + .content-p{
-	margin-top: 13.5pt;
+	margin-top: 5pt;
 }
 .contents-container h1:first-child{
 		margin-top: 0px;
@@ -315,6 +318,7 @@ figcaption,
 	/*width: 150px;*/
 	/*position:absolute;*/
 	/*top: var(--pagedjs-margin-top);*/
+	word-break: break-all;
 	padding-right: 4mm;
 	padding-left: 8.5mm;
 	line-height: 1.45;
@@ -350,6 +354,17 @@ figcaption,
  margin-top:0;
  font-size: 11pt;
 }
+
+.contents-container h1.ressources-title::before{
+	content:none;
+	margin:0;
+}
+
+.contents-container h2.ressources::before{
+	content:none;
+	margin:0;
+}
+
 .glossary h2,.references h2,.table-of-figures h2{
 	margin-left:-42.5%;
 
@@ -358,19 +373,18 @@ figcaption,
  column-count:2;
  column-gap:1cm;
  column-fill:auto;
- margin-left:-40%;
+ margin-left:-37.5%;
  padding:0;
  line-height:13.5pt;
  column-span : none;
  height: 17cm;
 }
-.ressources ul{
-}
+
 .ressources li:first-child, .figures-list li:first-child {
- margin-top:0
+	margin-top:0
 }
 .ressources li, .figures-list li {
- margin:13.5pt 0 13.5pt 0;
+	margin:13.5pt 0 13.5pt 0;
 }
 
 /* ----------- INTERPAGES --------------- */
@@ -434,4 +448,8 @@ figcaption,
 	 font-weight:800;
 	  font-family: var(--font-text);
 	  margin-right:4px;
+}
+
+.fiches .tableofcontents-block-title{
+	break-after: avoid;
 }

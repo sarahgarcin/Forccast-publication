@@ -1,8 +1,12 @@
-@media print{
+.table-of-content h2.edition-block-title, .table-of-contents-elements-container{
+  display: none;
+}
 
-    #list-toc-generated{ list-style: none;
-    margin-left: -40%;
-    overflow-y: hidden;}
+#list-toc-generated{ 
+  list-style: none;
+  margin-left: -40%;
+  overflow-y: hidden;
+}
 
     #list-toc-generated .toc-element a::before,
     .pagedjs_left_page #list-toc-generated .toc-element-level-1:first-child a::before{
@@ -203,4 +207,4 @@
         right: 0;
     }
 
-}
+

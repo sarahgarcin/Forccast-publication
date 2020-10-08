@@ -1,3 +1,21 @@
+// ------ T A B L E    O F     C O N T E N T S ----------
+class createTableOfContent extends Paged.Handler {
+    constructor(chunker, polisher, caller) {
+      super(chunker, polisher, caller);
+    }
+
+    beforeParsed(content){          
+      createToc({
+        content: content,
+        tocElement: '.sommaire',
+        titleElements: [ 'h2.edition-block-title', 'h3.edition-block-title', 'h4.edition-block-title' ]
+      });
+    }
+    
+  }
+
+Paged.registerHandlers(createTableOfContent);
+
 // ------ C R E A T E   S U B M E N U   B Y    P A R T   S C R I P T ----------
 
 class createSubMenu extends Paged.Handler {
@@ -133,6 +151,44 @@ var getNextSibling = function (elem, selector) {
   }
 
 };
+
+// ------------------ T R A M E    P L U S   S C R I P T ----------------
+class tramePlus extends Paged.Handler {
+  constructor(chunker, polisher, caller) {
+    super(chunker, polisher, caller);
+  }
+  afterRendered(pages){
+    pages.forEach(page => {
+      // Crée une trame de plus sur les interpages au début et à la fin 
+      if(page.element.classList.contains('pagedjs_trameplus_page')){
+        var plusContainer = document.createElement("div");
+        plusContainer.classList.add("plus-trame-container");
+        page.element.appendChild(plusContainer);
+        for(var i=0; i<=175; i++){
+          var random = Math.floor(Math.random()*2);
+          var randomRotation = Math.floor(Math.random()*8);
+          var plus = document.createElement("div");
+          if(random == 1){
+            plus.innerHTML = '+';
+            plus.classList.add("plus-trame");
+            if(randomRotation == 1){
+              var randomAngle = Math.floor(Math.random()*360);
+              plus.style.transform = 'rotate('+randomAngle+'deg)';
+            }
+          }
+          else{
+            plus.classList.add("empty-trame");
+          }
+          
+          plusContainer.appendChild(plus);
+          
+        }
+      }
+    });
+  }
+} 
+
+Paged.registerHandlers(tramePlus); 
 
 // ------------------ R A N D O M    P L U S   S C R I P T ----------------
 
@@ -438,6 +494,72 @@ function toCamelClassNote(elem) {
   let classCamel = splitClass.reduce(reducer);
   return classCamel;
 }
+
+
+// TABLE OF CONTENTS
+function createToc(config){
+    const content = config.content;
+    const tocElement = config.tocElement;
+    const titleElements = config.titleElements;
+
+    let tocElementDiv = content.querySelector(tocElement);
+    let tocUl = document.createElement("ul");
+    tocUl.id = "list-toc-generated";
+    tocElementDiv.appendChild(tocUl);
+
+    // add class to all title elements
+    let tocElementNbr = 0;
+    for(var i= 0; i < titleElements.length; i++){
+
+        let titleHierarchy = i + 1;
+        let titleElement = content.querySelectorAll(titleElements[i]);
+
+
+        titleElement.forEach(function(element) {
+
+            // add classes to the element
+            element.classList.add("title-element");
+            element.setAttribute("data-title-level", titleHierarchy);
+
+            // add id if doesn't exist
+            tocElementNbr++;
+            idElement = element.id;
+            if(idElement == ''){
+                element.id = 'title-element-' + tocElementNbr;
+            }
+            let newIdElement = element.id;
+
+        });
+
+    }
+
+    // create toc list
+    let tocElements = content.querySelectorAll(".title-element");
+
+    for(var i= 0; i < tocElements.length; i++){
+        let tocElement = tocElements[i];
+
+        let tocNewLi = document.createElement("li");
+
+        // Add class for the hierarcy of toc
+        tocNewLi.classList.add("toc-element");
+        tocNewLi.classList.add("toc-element-level-" + tocElement.dataset.titleLevel);
+
+        // Keep class of title elements
+        //let classTocElement = tocElement.classList;
+        //for(var n= 0; n < classTocElement.length; n++){
+        //    if(classTocElement[n] != "title-element"){
+        //      tocNewLi.classList.add(classTocElement[n]);
+        //    }
+       //  }
+
+        // Create the element
+        tocNewLi.innerHTML = '<a href="#' + tocElement.id + '">' + tocElement.innerHTML + '</a>';
+        tocUl.appendChild(tocNewLi);
+    }
+
+}
+
 
 
 

@@ -1,0 +1,71 @@
+.page-noir .edition-block-title, .page-titre-one .edition-block-title, .page-trame-plus .edition-block-title{
+	break-before: avoid;
+}
+
+.page-trame-plus{
+	page: trameplus;
+	page-break-before: always;
+}
+
+.page-trame-plus .edition-block-title{
+	display: none;
+}
+
+.pagedjs_trameplus_page{
+	position: relative;
+}
+
+.plus-trame-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--noir);
+}
+
+.plus-trame{
+	color: #FFF;
+	line-height: 0.8;
+	font-size: 46pt;	
+	padding: 3px;
+}
+
+
+.empty-trame{
+	color: var(--noir);
+	line-height: 0.8;
+	font-size: 50pt;
+	width: 40px;	
+	padding: 5px;
+}
+
+.page-noir{
+  page: noir;
+}
+
+.pagedjs_noir_page{
+	background: var(--noir);
+}
+
+.page-titre-one{
+  page: pagetitreone;
+}
+
+@page noir{
+	@bottom-right {
+   content: none;
+ 	}
+}
+
+@page trameplus{
+	@bottom-right {
+   content: none;
+ 	}
+}
+
+@page pagetitreone{
+	@bottom-right {
+   content: none;
+ 	}
+}
