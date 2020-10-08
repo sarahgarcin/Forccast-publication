@@ -8,7 +8,47 @@
   overflow-y: hidden;
 }
 
-    #list-toc-generated .toc-element a::before,
+#list-toc-generated .toc-element a::before{
+    content: target-counter(attr(href), page);
+    float: left;
+    width:0.5cm;
+    font-family: 'HK Grotesk';
+    font-size: 11pt;
+    font-weight: bold;
+    color: var(--noir);
+}
+
+#list-toc-generated .toc-element-level-1{
+    margin-top: 0.4cm;
+}
+
+#list-toc-generated .toc-element-level-1:first-child, #list-toc-generated .toc-element-level-1:nth-child(2){
+    display: none;
+}
+
+#list-toc-generated .toc-element a{ 
+    font-family: "YoungSerif", serif;
+    color: var(--noir);
+}
+
+#list-toc-generated .toc-element-level-1 a{
+    font-size: 18pt;
+    line-height: 1.3; 
+}
+
+#list-toc-generated .toc-element-level-2 a{
+    font-size: 14pt;
+    line-height: 1.3; 
+}
+
+#list-toc-generated .toc-element-level-3 a{
+    font-size: 11pt;
+    padding-left: 2cm;
+    line-height: 1.3; 
+}
+
+
+/*    #list-toc-generated .toc-element a::before,
     .pagedjs_left_page #list-toc-generated .toc-element-level-1:first-child a::before{
         content: target-counter(attr(href), page);
         float: left;
@@ -18,8 +58,8 @@
         font-size: 11pt;
         font-weight: bold;
         color: var(--noir);
-    }
-    .pagedjs_right_page #list-toc-generated .toc-element-level-1:first-child a{
+    }*/
+    /*.pagedjs_right_page #list-toc-generated .toc-element-level-1:first-child a{
       display: none;
     }
 
@@ -111,7 +151,7 @@
     /*.pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(23) {
       margin-bottom: 4cm;
     }*/
-    .pagedjs_right_page #list-toc-generated .toc-element-level-1 a,
+    /*.pagedjs_right_page #list-toc-generated .toc-element-level-1 a,
     .pagedjs_left_page #list-toc-generated .toc-element-level-1 a{
       color:var(--noir);
     }
@@ -149,7 +189,7 @@
     .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(28) a,
     .pagedjs_right_page #list-toc-generated .toc-element-level-1:nth-child(29) a{
       color: var(--pantone-three);
-    }
+    }*/
 
     /* target-text(attr(href), before) doesn't work for now, replace with counters (see below)*/
     /* #list-toc-generated .toc-element a::before{
@@ -158,7 +198,7 @@
 
     /* counters */
 
-    #list-toc-generated{
+/*    #list-toc-generated{
         counter-reset: counterTocLevel1;
     }
 
@@ -169,7 +209,7 @@
 
     #list-toc-generated .toc-element-level-2{
         counter-increment: counterTocLevel2;
-    }
+    }*/
 
 
 
@@ -181,7 +221,7 @@
 
     /* hack for leaders */
 
-    #list-toc-generated{
+/*    #list-toc-generated{
         overflow-x: hidden;
     }
 
@@ -205,6 +245,4 @@
 
     #list-toc-generated .toc-element a{
         right: 0;
-    }
-
-
+    }*/
