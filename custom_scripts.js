@@ -508,12 +508,12 @@ function createToc(config){
         tocNewLi.classList.add("toc-element-level-" + tocElement.dataset.titleLevel);
 
         // Keep class of title elements
-        //let classTocElement = tocElement.classList;
-        //for(var n= 0; n < classTocElement.length; n++){
-        //    if(classTocElement[n] != "title-element"){
-        //      tocNewLi.classList.add(classTocElement[n]);
-        //    }
-       //  }
+        let classTocElement = tocElement.classList;
+        for(var n= 0; n < classTocElement.length; n++){
+           if(classTocElement[n] != "title-element"){
+             tocNewLi.classList.add("toc-"+classTocElement[n]);
+           }
+        }
 
         // Create the element
         tocNewLi.innerHTML = '<a href="#' + tocElement.id + '">' + tocElement.innerHTML + '</a>';
