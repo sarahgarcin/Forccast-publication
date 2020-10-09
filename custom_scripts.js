@@ -28,20 +28,42 @@ class createSubMenu extends Paged.Handler {
     var elParent;
     
     titresPartie.forEach(titre => {
-      let allH3 = nextUntil(titre, '.titre-partie');
-      let indexUl = document.createElement("ul");
-      indexUl.classList.add("tableofcontents-block-title"); 
-      allH3.forEach(h3 => {
-        let indexLi = document.createElement("li");
-        indexLi.classList.add("list-index-element");
-        let h3Content = h3.querySelector('h3.edition-block-title');
-        if(h3Content != null){
-          indexLi.innerHTML = h3Content.innerHTML;
-          indexUl.appendChild(indexLi);
-          elParent = h3.closest(".is-level-1");
-        }
-      });
-      titre.appendChild(indexUl);
+      // if(titre.classList.contains('part-two')){
+      //   let allH4 = nextUntil(titre.querySelector('.is-level-1'), '.is-level-1');
+      //   console.log(allH4);
+      //   let indexUl = document.createElement("ul");
+      //   indexUl.classList.add("tableofcontents-block-title"); 
+      //   allH4.forEach(h4 => {
+
+      //     let indexLi = document.createElement("li");
+      //     indexLi.classList.add("list-index-element");
+      //     let h3Content = h4.querySelector('h4.edition-block-title');
+      //     if(h3Content != null){
+      //       indexLi.innerHTML = h3Content.innerHTML;
+      //       indexUl.appendChild(indexLi);
+      //       elParent = h4.closest(".is-level-2");
+      //     }
+      //   });
+      //   titre.appendChild(indexUl);
+      // }
+      // else{
+        let allH3 = nextUntil(titre, '.titre-partie');
+        let indexUl = document.createElement("ul");
+        indexUl.classList.add("tableofcontents-block-title"); 
+        allH3.forEach(h3 => {
+          let indexLi = document.createElement("li");
+          indexLi.classList.add("list-index-element");
+          let h3Content = h3.querySelector('h3.edition-block-title');
+          if(h3Content != null){
+            indexLi.innerHTML = h3Content.innerHTML;
+            indexUl.appendChild(indexLi);
+            elParent = h3.closest(".is-level-1");
+          }
+        });
+        titre.appendChild(indexUl);
+
+      // }
+
     });
 
 

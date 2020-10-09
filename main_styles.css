@@ -179,22 +179,26 @@ a{
 	font-size: 18pt;
 	margin-top:22mm;
 	margin-bottom: 10.25pt;
+	margin-left: 5mm;
 }
 
 .contents-container h1::before{
 	content:"+";
 	margin-right: 0.2cm;
+	margin-left: -5mm;
 }
 
 .contents-container h2{
 	margin-top: 0.01cm;
 	margin-bottom: 0px;
+	margin-left: 5mm;
 }
 
 .contents-container h2::before{
 	content:"++";
 	/*margin-left: -0.45cm;*/
-	margin-right: 0.2cm;
+	margin-right: 1mm;
+	margin-left: -5mm;
 }
 
 .content-p +  h2, .content-atomic-container + h2, .content-ul + h2{
