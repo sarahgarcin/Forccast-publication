@@ -188,15 +188,22 @@
 	margin-top: 0;
 	page-break-before: always;
 }*/
-.tutoriel-wrapper h2.tutoriel-title em{
+/*.tutoriel-wrapper h2.tutoriel-title em{
   font-family: "HK Grotesk";
-  font-weight: bolder;
+  font-weight: bold;
   font-size: 14pt;
-    font-style: normal;
+   font-style: normal;
 }
 .contents-container h2.tutoriel-title{
 	margin-top: 0;
 	margin-bottom: 0.5cm;
+}*/
+
+
+
+/* tagguer la page tutoriel pour créer une trame de plus */
+.tutoriel-wrapper{
+   page: tutoriel;
 }
 
 .tutoriel-wrapper{
@@ -205,13 +212,25 @@
   background-color: #FFF;
   z-index: 20;
   position: absolute;
-  padding: 0.3cm 0.5cm;
+  padding: 5mm 5mm;
   page-break-before: always;
 }
 
-/* tagguer la page tutoriel pour créer une trame de plus */
-.tutoriel-wrapper{
-   page: tutoriel;
+.contents-container h2.tutoriel-title{
+	margin-left: 0;
+	margin-bottom: 0.5cm;
+	text-align: center; 
+}
+
+.contents-container h2.tutoriel-title::before{
+	content:none;
+}
+
+.content-title.tutoriel-title em, .content-title.tutoriel-title{
+	font-family: "HK Grotesk";
+  font-weight: bold;
+  font-size: 14pt;
+  font-style: normal;
 }
 
 .pagedjs_tutoriel_page{
