@@ -21,9 +21,9 @@
   }
 }
 
-.part-three a{
+/*.part-three a{
 	color: var(--pantone-three);
-}
+}*/
 
 /* couleur de la page précédente*/
 .pagedjs_titrepartiepart-three_page.pagedjs_right_page ~ .pagedjs_blank_page{
@@ -87,11 +87,13 @@
 }
 
 /* couleur des notes */
-.pagedjs_part-three_page .footnote-p {
+.pagedjs_part-three_page .footnote-p, 
+.pagedjs_part-three_page .footnote-p a,
+.pagedjs_part-three_page .note-pointer a{
   color: var(--pantone-three);
 }
 
-.pagedjs_part-three_page sup.footnote{
+.pagedjs_part-three_page .footnote-ref sup{
 	color: var(--pantone-three);
 }
 

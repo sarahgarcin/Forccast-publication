@@ -10,14 +10,11 @@
 @import 'table-of-content.css';
 @import 'blank_page.css';
 
-.edition-block-title.title-element{
-	break-after: avoid;
-	break-before: avoid;
-}
-a{
-	text-decoration: none;
-}
 /* ------------------------- MAIN STYLE ---------------------------- */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 body{
 	font-family: "HK Grotesk", sans-serif;
@@ -87,6 +84,11 @@ ol > li::before{
 
 u{
 	text-decoration: none;
+}
+
+a{
+	text-decoration: none;
+	color: var(--noir);
 }
 
 
@@ -314,17 +316,19 @@ figcaption,
 
 /* ----------- FOOTNOTES ----------- */
 
-.footnote-p {
+.footnote {
 	/*width: 150px;*/
 	/*position:absolute;*/
 	/*top: var(--pagedjs-margin-top);*/
 	word-break: break-all;
 	padding-right: 4mm;
 	padding-left: 8.5mm;
-	line-height: 1.45;
-	font-size: 7pt;
+	line-height: 1.35;
+	font-size: 8pt;
 	text-align: left;
-	margin-top: -3.7mm;
+	margin-top: 4mm;
+	/*margin-top: -3.7mm;*/
+
 }
 
 .footnote-ref{
@@ -335,15 +339,25 @@ figcaption,
 .footnote-ref sup{
 	font-size: 7pt;
 	pointer-events: none;
-	margin-left: 2px;
+	margin-left: 1px;
 	vertical-align: top;
 	position: relative;
-	top:-4px;
+	top:-3px;
+	font-weight: bold;
 }
 
 .note-call_footnote-p{
 	display: none;
 }
+
+.note-pointer{
+	font-size: 7pt;
+	pointer-events: none;
+	font-weight: bold;
+	vertical-align: bottom;
+	margin-right: 4px;
+}
+
 
 /* ----------- RESSOURCES --------------- */
 
@@ -355,12 +369,12 @@ figcaption,
  font-size: 11pt;
 }
 
-.contents-container h1.ressources-title::before{
+.contents-container h1.ressources-title::before, .contents-container h1.ressources::before{
 	content:none;
 	margin:0;
 }
 
-.contents-container h2.ressources::before{
+.contents-container h2.ressources-title::before, .contents-container h2.ressources::before{
 	content:none;
 	margin:0;
 }
@@ -402,6 +416,21 @@ figcaption,
 	font-size: 11pt;
 }
 
+/* interpages partie noir*/
+/*.part-noir{
+   page: part-noir;
+}
+
+.pagedjs_part-noir_first_page{
+	background: var(--noir);
+	position: relative;
+}
+
+.pagedjs_part-noir.pagedjs_right_page ~ .pagedjs_blank_page{
+	background: var(--noir);
+}*/
+
+
  /* INTERPAGES TITRE PARTIE */
 .titre-partie h2.edition-block-title{
 	font-size:46pt;
@@ -438,7 +467,7 @@ figcaption,
 .tableofcontents-block-title li{
 	display: inline-block;
 	text-align: center;
-	margin-left: 1mm;
+	margin-left: 0mm;
 	margin-right: 1mm;
 	margin-bottom: 2mm;
 }

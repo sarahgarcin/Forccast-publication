@@ -13,6 +13,7 @@
 
 .pagedjs_trameplus_page{
 	position: relative;
+	background-color: var(--noir);
 }
 
 .plus-trame-container{
@@ -21,13 +22,14 @@
 	left: 0;
 	display: flex;
 	flex-wrap: wrap;
-	background-color: var(--noir);
+/*	max-height: 205mm;
+	min-height: 205mm;*/
 }
 
 .plus-trame{
 	color: #FFF;
 	line-height: 0.8;
-	font-size: 46pt;	
+	font-size: 47pt;	
 	padding: 3px;
 }
 

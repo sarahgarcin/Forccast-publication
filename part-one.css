@@ -22,9 +22,9 @@
   }
 }
 
-.part-one a{
+/*.part-one a{
 	color: var(--pantone-one);
-}
+}*/
 
 
 
@@ -91,11 +91,15 @@
 }
 
 /* couleur des notes */
-.pagedjs_part-one_page .footnote-p, .pagedjs_fiche_page .footnote-p{
+.pagedjs_part-one_page .footnote-p, 
+.pagedjs_fiche_page .footnote-p, 
+.pagedjs_fiche_page .note-pointer, 
+.pagedjs_part-one_page .footnote-p a, 
+.pagedjs_part-one_page .note-pointer a{
   color: var(--pantone-one);
 }
 
-.pagedjs_part-one_page sup.footnote, .pagedjs_fiche_page sup.footnote{
+.pagedjs_part-one_page .footnote-ref sup, .pagedjs_fiche_page .footnote-ref sup{
 	color: var(--pantone-one);
 }
 

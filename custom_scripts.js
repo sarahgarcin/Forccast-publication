@@ -14,7 +14,7 @@ class createTableOfContent extends Paged.Handler {
     
   }
 
-Paged.registerHandlers(createTableOfContent);
+// Paged.registerHandlers(createTableOfContent);
 
 // ------ C R E A T E   S U B M E N U   B Y    P A R T   S C R I P T ----------
 
@@ -164,7 +164,7 @@ class tramePlus extends Paged.Handler {
         var plusContainer = document.createElement("div");
         plusContainer.classList.add("plus-trame-container");
         page.element.appendChild(plusContainer);
-        for(var i=0; i<=175; i++){
+        for(var i=0; i<=160; i++){
           var random = Math.floor(Math.random()*2);
           var randomRotation = Math.floor(Math.random()*8);
           var plus = document.createElement("div");
@@ -239,7 +239,7 @@ Paged.registerHandlers(addPlus);
 
 // -------------- M A R G I N     N O T E S      S C R I P T -----------------
 
-let classNotes = "footnote-p"; // ← Change the CLASS of the notes here
+let classNotes = "footnote"; // ← Change the CLASS of the notes here
 let notesFloat = "left"; // ← Change the POSITION of the notes here
 
 class marginNotes extends Paged.Handler {
@@ -253,26 +253,26 @@ class marginNotes extends Paged.Handler {
     let notes = content.querySelectorAll("." + classNotes);
 
 
-    for (let i = 0; i < notes.length; ++i) {
+    // for (let i = 0; i < notes.length; ++i) {
 
-      // Add call notes
-      var spanCall = document.createElement("span");
-      spanCall.classList.add("note-call");
-      spanCall.classList.add("note-call_" + classNotes);
-      spanCall.dataset.noteCall = classNotes + '-' + i + 1;
-      notes[i].parentNode.insertBefore(spanCall, notes[i]);
+    //   // Add call notes
+    //   var spanCall = document.createElement("span");
+    //   spanCall.classList.add("note-call");
+    //   spanCall.classList.add("note-call_" + classNotes);
+    //   spanCall.dataset.noteCall = classNotes + '-' + i + 1;
+    //   notes[i].parentNode.insertBefore(spanCall, notes[i]);
 
-      // Add marker notes
-      var spanMarker = document.createElement("span");
-      spanMarker.classList.add("note-marker");
-      spanMarker.classList.add("note-marker_" + classNotes);
-      spanMarker.dataset.noteMarker = classNotes + '-' + i + 1;
-      notes[i].prepend(spanMarker);
+    //   // Add marker notes
+    //   var spanMarker = document.createElement("span");
+    //   spanMarker.classList.add("note-marker");
+    //   spanMarker.classList.add("note-marker_" + classNotes);
+    //   spanMarker.dataset.noteMarker = classNotes + '-' + i + 1;
+    //   notes[i].prepend(spanMarker);
 
 
-      // Hide notes to avoid rendering problems
-      notes[i].style.display = "none";
-    }
+    //   // Hide notes to avoid rendering problems
+    //   notes[i].style.display = "none";
+    // }
 
 
     /* NOTE FLOAT ---------------------------------------------------------------------------------- */
@@ -433,7 +433,8 @@ class marginNotes extends Paged.Handler {
   }/* end afterPageLayout*/
 
 }
-Paged.registerHandlers(marginNotes);
+
+ Paged.registerHandlers(marginNotes);
 
 
 

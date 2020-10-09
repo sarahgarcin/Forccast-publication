@@ -23,6 +23,9 @@
 }
 
 /* couleur de la page précédente*/
+.pagedjs_ouverture_page.pagedjs_ouverture_first_page{
+		background: var(--noir);	
+}
 .pagedjs_ouverture_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--noir);
 }

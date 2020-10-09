@@ -21,9 +21,9 @@
   }
 }
 
-.part-two a{
+/*.part-two a{
 	color: var(--pantone-two);
-}
+}*/
 
 /* couleur de la page précédente*/
 /* pour les interpages de titre de partie */
@@ -87,11 +87,13 @@
 }
 
 /* couleur des notes */
-.pagedjs_part-two_page .footnote-p {
+.pagedjs_part-two_page .footnote-p, 
+.pagedjs_part-two_page .footnote-p a,
+.pagedjs_part-two_page .note-pointer a{
   color: var(--pantone-two);
 }
 
-.pagedjs_part-two_page sup.footnote{
+.pagedjs_part-two_page .footnote-ref sup{
 	color: var(--pantone-two);
 }
 
