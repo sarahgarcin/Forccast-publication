@@ -54,6 +54,40 @@
   page: pagetitreone;
 }
 
+.page-titre-one .edition-block-title{
+	display: none;
+}
+
+.page-titre-one .contents-container{
+	margin-top: 0;
+	margin-left: -37.5%;
+}
+
+.page-titre-one .contents-container h1{
+	font-size: var(--size-title);
+	margin-left: 0;
+}
+
+
+.page-titre-one .contents-container h1::before {
+	content: none;
+	margin: 0;
+
+}
+
+.page-titre-one .contents-container h2{
+	margin-left: 0;
+	font-size: 15pt; 
+	margin-top: 2cm; 
+	margin-bottom: 2cm;
+}
+
+.page-titre-one .contents-container h2::before {
+	content: none;
+	margin: 0;
+
+}
+
 @page noir{
 	@bottom-right {
    content: none;

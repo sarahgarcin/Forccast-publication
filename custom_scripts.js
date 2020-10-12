@@ -14,7 +14,7 @@ class createTableOfContent extends Paged.Handler {
     
   }
 
-// Paged.registerHandlers(createTableOfContent);
+Paged.registerHandlers(createTableOfContent);
 
 // ------ C R E A T E   S U B M E N U   B Y    P A R T   S C R I P T ----------
 

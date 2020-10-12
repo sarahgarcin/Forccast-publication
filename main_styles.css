@@ -91,6 +91,11 @@ a{
 	color: var(--noir);
 }
 
+blockquote{
+	text-align: left; 
+	margin-right: 0;
+}
+
 
 /* ------------ GENERAL PRINT ------------  */
 @page {
@@ -154,7 +159,8 @@ a{
 .edition-block-subtitle{
 	margin: 0;
 	margin-left: -40mm;
-	font-size: 11pt;
+	font-size: 14pt;
+	margin-top: 2mm;
 }
 
 .tableofcontents-block-title{
@@ -180,6 +186,15 @@ a{
 	margin-top:22mm;
 	margin-bottom: 10.25pt;
 	margin-left: 5mm;
+}
+
+
+.contents-container h1:first-child{
+	margin-top: 0;
+}
+
+.contents-container .content-p + h1:first-child{
+	margin-top:22mm;
 }
 
 .contents-container h1::before{
@@ -257,8 +272,8 @@ figure{
 }
 .content-figure{
 	margin:0;
-	width: 130%;
-	margin-left: -30%;
+/*	width: 130%;
+	margin-left: -30%;*/
 	page-break-inside: avoid;
 }
 
@@ -281,6 +296,10 @@ figcaption,
 	margin:0;
 }
 
+.figure-caption-description{
+	display: none;
+}
+
 /* ----------- PLANCHE D'IMAGES --------------- */
 .planche{
 	align-items: center;
@@ -290,7 +309,7 @@ figcaption,
 	page-break-before: always;
 	page-break-after: always;
 	width: 140%;
-	margin-left: -40%;
+	margin-left: -37.5%;
 }
 
 /*.planche{
@@ -302,9 +321,9 @@ figcaption,
 .planche .content-figure{
 	/*width: 100%;*/
 	margin:0;
-	width: 5.5cm;
-	margin-bottom: 0.5cm;
-	margin-right: 0.5cm;
+	width: 6.8cm;
+	margin-bottom: 0.8cm;
+	margin-right: 0.4cm;
 }
 
 /* ----------- TRAME PLUS --------------- */
@@ -315,7 +334,7 @@ figcaption,
 /* -----------  TITRE COURANT ----------- */
 .pagedjs_margin-bottom-left{
 	margin-left: -40mm;
-	width: 10cm;
+	width: 13cm;
 }
 
 /* ----------- FOOTNOTES ----------- */
@@ -324,13 +343,16 @@ figcaption,
 	/*width: 150px;*/
 	/*position:absolute;*/
 	/*top: var(--pagedjs-margin-top);*/
-	word-break: break-all;
+	word-break: break-word;
 	padding-right: 4mm;
 	padding-left: 8.5mm;
 	line-height: 1.35;
 	font-size: 8pt;
 	text-align: left;
-	margin-top: 4mm;
+	margin-top: -4mm;
+	hyphens: manual;
+	font-family: "HK Grotesk", sans-serif;
+	font-weight: normal;
 	/*margin-top: -3.7mm;*/
 
 }
@@ -346,7 +368,7 @@ figcaption,
 	margin-left: 1px;
 	vertical-align: top;
 	position: relative;
-	top:-3px;
+	top:-1px;
 	font-weight: bold;
 }
 
@@ -366,11 +388,20 @@ figcaption,
 /* ----------- RESSOURCES --------------- */
 
 .ressources-title,.glossary h2,.references h2,.table-of-figures h2  {
-	page-break-before: always;
- width:140%;
- margin-left:-37.5%;
+	/*page-break-before: always;*/
+ /*width:140%;*/
+ /*margin-left:-37.5%;*/
  margin-top:0;
  font-size: 11pt;
+ column-span: all;
+ margin-bottom: 1em;
+}
+
+.contents-container h1.ressources-title, .contents-container h1.ressources{
+	margin-left: 0;
+	/*margin-bottom: 1cm;*/
+	margin-bottom: 13.5pt;
+	margin-top: 40.5pt;
 }
 
 .contents-container h1.ressources-title::before, .contents-container h1.ressources::before{
@@ -384,18 +415,37 @@ figcaption,
 }
 
 .glossary h2,.references h2,.table-of-figures h2{
-	margin-left:-42.5%;
+	margin-left:-37.5%;
 
 }
-.ressources, .figures-list {
- column-count:2;
- column-gap:1cm;
- column-fill:auto;
- margin-left:-37.5%;
+.ressources-wrapper, .figures-list {
+/* column-count:2;
+ column-gap:1cm;*/
+/* column-fill:auto;*/
+/* margin-left:-37.5%;*/
  padding:0;
  line-height:13.5pt;
- column-span : none;
- height: 17cm;
+/* grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 1cm;
+	grid-row-gap: 1cm;*/
+/* column-span : none;*/
+ /*height: 17cm;*/
+}
+
+.ressources-wrapper h2{
+	margin-left:0;
+	margin-bottom: 0.5cm;
+}
+
+.ressources-wrapper h2::before{
+	content:none;
+	margin:0;
+}
+
+.ressources-wrapper ul, .ressources-wrapper .content-p{
+	margin-top: 0;
+	word-break: break-word;
+  padding: 0;
 }
 
 .ressources li:first-child, .figures-list li:first-child {
@@ -403,6 +453,10 @@ figcaption,
 }
 .ressources li, .figures-list li {
 	margin:13.5pt 0 13.5pt 0;
+/*	-webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+	break-inside: avoid*/;
+	break-inside: avoid-column;
 }
 
 /* ----------- INTERPAGES --------------- */
@@ -421,7 +475,7 @@ figcaption,
 }
 
 /* interpages partie noir*/
-/*.part-noir{
+.part-noir{
    page: part-noir;
 }
 
@@ -430,9 +484,16 @@ figcaption,
 	position: relative;
 }
 
-.pagedjs_part-noir.pagedjs_right_page ~ .pagedjs_blank_page{
+/*.pagedjs_part-noir_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--noir);
 }*/
+
+/* fixed bug table of contents */
+.part-noir .tableofcontents-block-title{
+	display: none;
+	page-break-after: avoid;
+	break-after: avoid;
+}
 
 
  /* INTERPAGES TITRE PARTIE */
@@ -463,17 +524,17 @@ figcaption,
 	text-align-last: center;
 	line-height: 1;
 	letter-spacing: 0.02em;
-	break-after: always;
+	/*break-after: always;*/
 	margin:1px;
 	 /*font-family: 'YoungSerif';*/
 }
 
 .tableofcontents-block-title li{
-	display: inline-block;
+	/* display: inline-block;*/
 	text-align: center;
 	margin-left: 0mm;
 	margin-right: 1mm;
-	margin-bottom: 2mm;
+	margin-bottom: 4mm;
 }
 
 .tableofcontents-block-title li::before{

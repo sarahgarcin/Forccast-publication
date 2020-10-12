@@ -16,10 +16,15 @@
    color: var(--pantone-one);
  	}
  	/* contenu titre courant et couleur du titre courant */
- 	 @bottom-left {
+/* 	@bottom-left {
     color: var(--pantone-one);
     content: string(onetitle) ' -> ' string(onesubtitle);
+  }*/
+  @bottom-left {
+    color: var(--pantone-one);
+    content: 'Le regard ->' string(onesubtitle);
   }
+
 }
 
 /*.part-one a{
@@ -91,10 +96,12 @@
 }
 
 /* couleur des notes */
-.pagedjs_part-one_page .footnote-p, 
-.pagedjs_fiche_page .footnote-p, 
+.pagedjs_part-one_page .footnote, 
+.pagedjs_fiche_page .footnote,
+.pagedjs_part-one_page .footnote a,
+.pagedjs_fiche_page .footnote a, 
 .pagedjs_fiche_page .note-pointer, 
-.pagedjs_part-one_page .footnote-p a, 
+.pagedjs_part-one_page .footnote a, 
 .pagedjs_part-one_page .note-pointer a{
   color: var(--pantone-one);
 }
@@ -116,7 +123,10 @@
 
 }
 
-.part-one .ressources{
+.part-one .ressources, 
+.part-one .ressources a, 
+.part-one .ressources-wrapper,
+.part-one .ressources-wrapper a{
 	color: var(--pantone-one);
 }
 
@@ -147,7 +157,7 @@
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
     color: var(--pantone-one);
-    content: string(onesubtitle) ' -> ' string(onesubsubtitle);
+    content: 'Le regard -> ' string(onesubtitle) ' -> ' string(onesubsubtitle);
   }
 }
 
@@ -203,7 +213,7 @@
 }
 .fiches .tableofcontents-block-title li {
  display:block;
- color:black; /* color:var(-pantone-one); si texte noir */
+ color: var(--pantone-one); /* color:var(-pantone-one); si texte noir */
  margin-bottom:0.15cm
 }
 .fiches .tableofcontents-block-title li::before{
@@ -229,11 +239,11 @@
 	margin-top: 0.5cm;
 }
 
-.fiches .content-p{
+/*.fiches .content-p{
 	font-style: italic;
-}
+}*/
 
-.fiches .ressources{
+.fiches .ressources, .fiches .ressources-wrapper{
 	color: var(--pantone-one);
 }
 

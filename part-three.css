@@ -87,8 +87,8 @@
 }
 
 /* couleur des notes */
-.pagedjs_part-three_page .footnote-p, 
-.pagedjs_part-three_page .footnote-p a,
+.pagedjs_part-three_page .footnote, 
+.pagedjs_part-three_page .footnote a,
 .pagedjs_part-three_page .note-pointer a{
   color: var(--pantone-three);
 }
@@ -110,7 +110,10 @@
 
 }
 
-.part-three .ressources{
+.part-three .ressources, 
+.part-three .ressources a, 
+.part-three .ressources-wrapper, 
+.part-three .ressources-wrapper a{
 	color: var(--pantone-three);
 }
 
@@ -208,7 +211,7 @@
 
 .tutoriel-wrapper{
 	width: 105%;
-	margin-left: -23%;
+	margin-left: -20%;
   background-color: #FFF;
   z-index: 20;
   position: absolute;
@@ -216,21 +219,25 @@
   page-break-before: always;
 }
 
-.contents-container h2.tutoriel-title{
+.contents-container .tutoriel-wrapper h2{
 	margin-left: 0;
-	margin-bottom: 0.5cm;
-	text-align: center; 
+	margin-bottom: 0cm;
+	font-family: "HK Grotesk";
 }
 
-.contents-container h2.tutoriel-title::before{
+.contents-container .tutoriel-wrapper h2::before,
+.contents-container .tutoriel-wrapper h1::before{
 	content:none;
 }
+
+
 
 .content-title.tutoriel-title em, .content-title.tutoriel-title{
 	font-family: "HK Grotesk";
   font-weight: bold;
   font-size: 14pt;
   font-style: normal;
+  margin-left: 0;
 }
 
 .pagedjs_tutoriel_page{

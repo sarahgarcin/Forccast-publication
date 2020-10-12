@@ -10,7 +10,7 @@
 
 .sommaire .edition-block-title{
     break-before:avoid;
-    font-size: 15pt;
+    font-size: 14pt;
     margin-left: -21%;
 }
 
@@ -70,7 +70,7 @@
 }
 
 #list-toc-generated .toc-element-level-1 a{
-    font-size: 18pt;
+    font-size: 14pt;
     margin-left: 1cm; 
 }
 
@@ -80,8 +80,16 @@
 }
 
 #list-toc-generated .toc-element-level-3 a{
-    font-size: 12pt;
+    font-size: 14pt;
     margin-left: 2cm; 
+}
+
+/* Marges sur chaque partie */
+
+.pagedjs_sommaire_first_page #list-toc-generated .toc-element-level-1:nth-child(12),
+.pagedjs_sommaire_first_page #list-toc-generated .toc-element-level-1:nth-child(25),
+.pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(10){
+    margin-top: 13.5pt;
 }
 
 /* --- C O L O R S --- */

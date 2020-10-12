@@ -17,7 +17,7 @@
  	}
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
-    content: 'Ouverture -> ' string(title);
+    content: string(title);
     color: var(--noir);
   }
 }
@@ -71,12 +71,9 @@
 }
 
 /* couleur des notes */
-.ouverture .footnote-p {
-  color: var(--noir);
-}
-
-.ouverture sup.footnote{
+.ouverture .footnote{
 	color: var(--noir);
+	opacity: 0.8;
 }
 
 

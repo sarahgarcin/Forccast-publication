@@ -8,6 +8,14 @@
    page: part-two;
 }
 
+/* fixed bug table of contents */
+.part-two.article .tableofcontents-block-title{
+	/*display: none;*/
+	page-break-after: avoid;
+	break-after: avoid;
+
+}
+
 /* ----- PART TWO COLORS --------*/
 @page part-two{
   /* couleur des numéros de page*/
@@ -17,7 +25,7 @@
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
     color: var(--pantone-two);
-    content: string(twotitle) ' -> ' string(twosubtitle);
+    content: 'Controverses -> ' string(twosubtitle);
   }
 }
 
@@ -87,8 +95,8 @@
 }
 
 /* couleur des notes */
-.pagedjs_part-two_page .footnote-p, 
-.pagedjs_part-two_page .footnote-p a,
+.pagedjs_part-two_page .footnote, 
+.pagedjs_part-two_page .footnote a,
 .pagedjs_part-two_page .note-pointer a{
   color: var(--pantone-two);
 }
@@ -110,7 +118,10 @@
 
 }
 
-.part-two .ressources{
+.part-two .ressources, 
+.part-two .ressources a, 
+.part-two .ressources-wrapper, 
+.part-two .ressources-wrapper a{
 	color: var(--pantone-two);
 }
 
@@ -145,8 +156,8 @@
  padding:0
 }
 .controverses .tableofcontents-block-title li {
- display:block;
- color:black; /* color:var(-pantone-two); si texte noir */
+ display:block; 
+ color:var(--pantone-two);
  margin-bottom:0.15cm
 }
 .controverses .tableofcontents-block-title li::before{
@@ -168,6 +179,6 @@
 	break-before: right;
 }
 
-.controverses .ressources{
+.controverses .ressources, .controverses .ressources-wrapper{
 	color: var(--pantone-two);
 }
