@@ -153,7 +153,10 @@ if ( window.Paged ) {
             // footnoteArea.className = 'footnote-area';
             // pageContent.appendChild( footnoteArea );
             for ( const footnote of footnotes ) {
-              footnoteIndex++;
+              // footnoteIndex++;
+              // console.log(footnote.getAttribute('data-notenumber'));
+            // !!!! changemnet ici - j'utilise l'attribut de la footnote plutôt que de compter toutes les notes !!!! 
+              footnoteIndex = footnote.getAttribute('data-notenumber');
               const handler = footnote.parentElement;
 
               // footnoteArea.appendChild( footnote );
