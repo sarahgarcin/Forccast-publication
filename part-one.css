@@ -31,7 +31,14 @@
 	color: var(--pantone-one);
 }*/
 
+/* Mettre des plus derrière le grand titre */
+.pagedjs_titrepartiepart-one_page{
+	position: relative;
+}
 
+.pagedjs_titrepartiepart-one_page .plus{
+	color: #FFF;
+}
 
 /* couleur de la page précédente*/
 /* pour les interpages de titre de partie */
@@ -45,14 +52,14 @@
 }*/
 
 /* tentative de fixer le bug qui ne donne pas la classe .pagedjs_blank_page au page précédent les titres des articles*/
-.pagedjs_part-one_first_page{
+/*.pagedjs_part-one_first_page{
 	background: var(--pantone-one);
 	position: relative;
 }
 
 .pagedjs_part-one_first_page .plus{
 	color: #FFF;
-}
+}*/
 
 .part-one .content-ul li::before{
 	color: var(--pantone-one);
@@ -158,6 +165,15 @@
  	 @bottom-left {
     color: var(--pantone-one);
     content: 'Le regard -> ' string(onesubtitle) ' -> ' string(onesubsubtitle);
+  }
+}
+
+@page fiche:first {
+	@bottom-left {
+  	content: none;
+  }
+  @bottom-right {
+  	content: none;
   }
 }
 

@@ -94,7 +94,7 @@ a{
 blockquote{
 	text-align: left; 
 	margin-right: 0;
-	font-size: 9pt;
+	font-size: 9.5pt;
 }
 
 .small-caps{
@@ -253,6 +253,20 @@ blockquote{
 	orphans: 3;
 }
 
+.part-intro{
+	page: partintro;
+}
+
+.part-intro .contents-container{
+	margin-top:0;
+}
+
+@page partintro{
+	@bottom-left {
+		content: none;
+	}
+}
+
 /* ------------ FIN GÉNÉRAL ------------  */
 
 
@@ -326,9 +340,19 @@ figcaption,
 .planche .content-figure{
 	/*width: 100%;*/
 	margin:0;
-	width: 6.8cm;
+	/*width: 6.8cm;*/
 	margin-bottom: 0.8cm;
 	margin-right: 0.4cm;
+	page-break-inside: avoid;
+}
+
+
+.planche .content-figure .fig-landscape{
+	width: 8cm;
+}
+
+.planche .content-figure .fig-portrait{
+	width: 5cm;
 }
 
 /* ----------- TRAME PLUS --------------- */
