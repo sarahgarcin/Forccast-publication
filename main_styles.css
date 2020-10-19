@@ -94,6 +94,11 @@ a{
 blockquote{
 	text-align: left; 
 	margin-right: 0;
+	font-size: 9pt;
+}
+
+.small-caps{
+	font-variant-caps: all-small-caps;
 }
 
 

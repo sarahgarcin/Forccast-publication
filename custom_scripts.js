@@ -93,7 +93,7 @@ class createSubMenu extends Paged.Handler {
 
 }
 
-Paged.registerHandlers(createSubMenu);
+// Paged.registerHandlers(createSubMenu);
 
 // FONCTIONS
 function insertAfter(referenceNode, newNode) {
