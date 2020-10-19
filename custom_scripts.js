@@ -400,7 +400,7 @@ class marginNotes extends Paged.Handler {
         }
         // alert
         let pageNumber = pageElement.dataset.pageNumber;
-        alert("Rendering issue \n ☞ A marginal note overflow on page " + pageNumber + " (this is because there is too many on this page and paged.js can't breaks notes between pages for now.)");
+        // alert("Rendering issue \n ☞ A marginal note overflow on page " + pageNumber + " (this is because there is too many on this page and paged.js can't breaks notes between pages for now.)");
         noteOverflow = true;
 
       } else {
