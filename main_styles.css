@@ -102,6 +102,18 @@ blockquote{
 }
 
 
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub { 
+  top: 0.4em; 
+}
+
+
+
+
 /* ------------ GENERAL PRINT ------------  */
 @page {
   size: 165mm 205mm;
