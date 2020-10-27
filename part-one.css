@@ -213,6 +213,14 @@
 	color: #FFF;
 }
 
+.pagedjs_fiches_page.pagedjs_fiches_first_page.pagedjs_right_page ~ .pagedjs_blank_page{
+	background:  var(--pantone-one);
+}
+
+.pagedjs_fiches_page.pagedjs_fiches_first_page.pagedjs_right_page ~ .pagedjs_blank_page .plus{
+	color: #FFF;
+}
+
 .pagedjs_fiches_first_page{
 	background: var(--pantone-one);
 	position: relative;
@@ -280,6 +288,14 @@
 }
 
 .pagedjs_fiche_page.pagedjs_fiche_first_page.pagedjs_right_page + .pagedjs_blank_page .plus{
+	color: var(--pantone-one);
+}
+
+.pagedjs_fiche_page.pagedjs_fiche_first_page.pagedjs_right_page ~ .pagedjs_blank_page{
+	background: #FFF;
+}
+
+.pagedjs_fiche_page.pagedjs_fiche_first_page.pagedjs_right_page ~ .pagedjs_blank_page .plus{
 	color: var(--pantone-one);
 }
 

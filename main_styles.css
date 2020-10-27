@@ -291,9 +291,11 @@ sub {
 /* ------------ GENERAL LIST ------------  */
 .content-ul{
 	padding-left: 1cm;
+	hyphens: none
 }
 
 .content-ul li{
+	margin-bottom: 13.5pt;
 
 }
 
@@ -378,7 +380,7 @@ figcaption,
 }
 
 .planche .content-figure.fig-portrait{
-	width: 4cm;
+	width: 3.8cm;
 }
 
 /*.planche .content-figure .fig-landscape + figcaption{
@@ -556,6 +558,14 @@ figcaption,
 	display: none;
 	page-break-after: avoid;
 	break-after: avoid;
+}
+.pagedjs_part-noir_page h2.edition-block-title {string-set: blacktitle content(text) }
+
+@page part-noir{
+  @bottom-left {
+    content: string(blacktitle);
+  }
+
 }
 
 
