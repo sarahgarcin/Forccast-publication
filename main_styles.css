@@ -111,6 +111,10 @@ sub {
   top: 0.4em; 
 }
 
+.ours .content-p{
+	font-size: 9pt;
+}
+
 
 
 
@@ -317,6 +321,15 @@ figure{
   mix-blend-mode: screen;
   filter: grayscale(100%) contrast(110%) brightness(115%);
   opacity: 1;
+}
+
+figcaption .figure-caption-content > div, 
+figcaption .figure-caption-content > p{
+	display: inline-block;
+}
+
+.figure-caption-source::before{
+	content: " — ";
 }
 
 figcaption,
