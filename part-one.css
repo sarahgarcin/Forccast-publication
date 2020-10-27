@@ -1,7 +1,7 @@
 /* --------------------------- PART ONE ------------------------------  */
 /* envoyer les titres courant pour cette partie */
 .pagedjs_titrepartiepart-one_page h2.edition-block-title {string-set: onetitle content(text) }
-.pagedjs_part-one_page h3.edition-block-title {string-set: onesubtitle content(text) }
+.pagedjs_fiches_page h3.edition-block-title {string-set: onesubtitle content(text) }
 /*h3.edition-block-title {string-set: subtitle content(text) }*/
 
 /* Nommer la page pour styler les marges et numéros de pages */
@@ -22,9 +22,27 @@
   }*/
   @bottom-left {
     color: var(--pantone-one);
-    content: 'Le regard ->' string(onesubtitle);
+    content: 'Le regard -> ' string(onesubtitle);
   }
 
+}
+
+/* Nommer la page intro de la partie 1 pour styler les marges et numéros de pages */
+.part-intro-one{
+	page: part-intro-one;
+}
+
+.part-intro-one .contents-container{
+	margin-top:0;
+}
+
+@page part-intro-one{
+	@bottom-left {
+		content: none;
+	}
+	@bottom-right {
+   color: var(--pantone-one);
+ 	}
 }
 
 /*.part-one a{
@@ -45,7 +63,6 @@
 .pagedjs_titrepartiepart-one_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--pantone-one);
 }
-
 /* pour les interpages d'articles */
 /*.pagedjs_part-one_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--pantone-one);
@@ -73,7 +90,7 @@
 	color: var(--pantone-one);
 }
 
-.part-one .content-figure figure{
+.part-one .content-figure{
 	background: var(--pantone-one);
 }
 
@@ -109,11 +126,22 @@
 .pagedjs_fiche_page .footnote a, 
 .pagedjs_fiche_page .note-pointer, 
 .pagedjs_part-one_page .footnote a, 
-.pagedjs_part-one_page .note-pointer a{
+.pagedjs_part-one_page .note-pointer a,
+.part-intro-one .footnote,
+.part-intro-one .footnote a,
+.part-intro-one .note-pointer,
+.part-intro-one .note-pointer a,
+.fiches .footnote,
+.fiches .footnote a,
+.fiches .note-pointer,
+.fiches .note-pointer a{
   color: var(--pantone-one);
 }
 
-.pagedjs_part-one_page .footnote-ref sup, .pagedjs_fiche_page .footnote-ref sup{
+.pagedjs_part-one_page .footnote-ref sup, 
+.pagedjs_fiche_page .footnote-ref sup,
+.part-intro-one .footnote-ref sup, 
+.fiches .footnote-ref sup{
 	color: var(--pantone-one);
 }
 
@@ -148,8 +176,60 @@
 
 
 /* ----------- PERSPECTIVES / FICHES / FICHE --------------- */
+
+
+/* ----- FICHES --------*/
+.fiches{
+   page: fiches;
+}
+
+@page fiches{
+  /* couleur des numéros de page*/
+  @bottom-right {
+   color: var(--pantone-one);
+ 	}
+ 	/* contenu titre courant et couleur du titre courant */
+ 	 @bottom-left {
+    color: var(--pantone-one);
+    content: 'Le regard -> ' string(onesubtitle);
+  }
+}
+
+@page fiches:first {
+	@bottom-left {
+  	content: none;
+  }
+  @bottom-right {
+  	content: none;
+  }
+}
+
+/* Changer la couleur des interpages pour les pages fiche */
+.pagedjs_fiches_page.pagedjs_fiches_first_page.pagedjs_right_page + .pagedjs_blank_page{
+	background:  var(--pantone-one);
+}
+
+.pagedjs_fiches_page.pagedjs_fiches_first_page.pagedjs_right_page + .pagedjs_blank_page .plus{
+	color: #FFF;
+}
+
+.pagedjs_fiches_first_page{
+	background: var(--pantone-one);
+	position: relative;
+}
+
+.pagedjs_fiches_first_page .plus{
+	color: #FFF;
+}
+
+/* Nommer la page fiche pour créer des interpages avec fond blanc et plus vert*/
 .pagedjs_fiche_page h4.edition-block-title {string-set: onesubsubtitle content(text) }
 
+.fiches h3.edition-block-title{
+	color: var(--pantone-one);
+}
+
+/* ----- FICHE --------*/
 
 /* Nommer la page fiche pour créer des interpages avec fond blanc et plus vert*/
 .fiche{

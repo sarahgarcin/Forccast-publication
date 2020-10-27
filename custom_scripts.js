@@ -14,7 +14,7 @@ class createTableOfContent extends Paged.Handler {
     
   }
 
-Paged.registerHandlers(createTableOfContent);
+// Paged.registerHandlers(createTableOfContent);
 
 // ------ R A T I O    O F     I M A G E S ----------
 class imageRatio extends Paged.Handler {
@@ -294,7 +294,7 @@ class addPlus extends Paged.Handler {
   	pages.forEach(page => {
   		// console.log(page);
   		// Ajoute le nombre de plus correspondant au numéro de page positionné aléatoirement sur les interpages
-  		if(page.element.classList.contains('pagedjs_blank_page') || page.element.classList.contains('pagedjs_titrepartiepart-one_page') || page.element.classList.contains('pagedjs_fiche_first_page') || page.element.classList.contains('pagedjs_part-one_first_page') || page.element.classList.contains('pagedjs_part-two_first_page') || page.element.classList.contains('pagedjs_part-three_first_page')){
+  		if(page.element.classList.contains('pagedjs_blank_page') || page.element.classList.contains('pagedjs_titrepartiepart-one_page') || page.element.classList.contains('pagedjs_fiche_first_page') || page.element.classList.contains('pagedjs_fiches_first_page')|| page.element.classList.contains('pagedjs_part-one_first_page') || page.element.classList.contains('pagedjs_part-two_first_page') || page.element.classList.contains('pagedjs_part-three_first_page')){
 				var pageNumber = page.position + 1;
 				for(var i=0; i<=pageNumber; i++){
 					var plus = document.createElement("div");
@@ -467,7 +467,7 @@ class marginNotes extends Paged.Handler {
         for (let a = 1; a < notes.length; ++a) {
           let notePrev = notes[a - 1];
           let newMargin = biggestMargin(notePrev, notes[a]);
-          let newTop = notePrev.offsetTop + notePrev.offsetHeight - marginNoteTop(notes[a]) + newMargin;
+          let newTop = notePrev.offsetTop + notePrev.offsetHeight - marginNoteTop(notes[a]) + newMargin + 5;
           notes[a].style.top = newTop + "px";
         }
         // alert
@@ -483,7 +483,7 @@ class marginNotes extends Paged.Handler {
             let noteTop = notes[i].offsetTop;
             let notePrev = notes[i - 1];
             let newMargin = biggestMargin(notes[i], notePrev);
-            let notePrevBottom = notePrev.offsetTop - marginNoteTop(notePrev) + notePrev.offsetHeight + newMargin;
+            let notePrevBottom = notePrev.offsetTop - marginNoteTop(notePrev) + notePrev.offsetHeight + newMargin + 5;
             // Push down the note to bottom if it's over the previous one 
             if (notePrevBottom > noteTop) {
               notes[i].style.top = notePrevBottom + "px";

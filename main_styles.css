@@ -21,7 +21,7 @@ body{
 	font-size: 11pt;
 	text-align: justify;
 	text-align-last: left;
-	-webkit-hyphens: auto;
+	/*-webkit-hyphens: auto;*/
 }
 
 img{
@@ -48,8 +48,11 @@ h1, h2, h3, h4, h5, h6{
 ul li{
 	list-style: none;
 	line-height:13.5pt;
- margin-bottom: 0mm;
+ 	margin-bottom: 0mm;
 	text-align: left;
+	hyphens: auto;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
 }
 
 ul > li > ul {
@@ -69,6 +72,8 @@ ol li{
  	margin-bottom: 0mm;
 	text-align: justify;
 	hyphens: auto;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
 }
 
 ol > li > ol {
@@ -95,6 +100,9 @@ blockquote{
 	text-align: left; 
 	margin-right: 0;
 	font-size: 9.5pt;
+	line-height: 13.5pt;
+	/*margin-top: 13.5pt;*/
+	/*margin-bottom: 13.5pt;*/
 }
 
 .small-caps{
@@ -105,8 +113,9 @@ blockquote{
 sup, sub {
   vertical-align: baseline;
   position: relative;
-  top: -0.4em;
+  /*top: -0.4em;*/
 }
+
 sub { 
   top: 0.4em; 
 }
@@ -115,7 +124,14 @@ sub {
 	font-size: 9pt;
 }
 
+/* tentative de résoudre le bug des hyphens last qui ne se coupent pas d'une page à l'autre */
+.pagedjs_area .content-p:last-child{
+	text-align-last: justify;
+}
 
+.pagedjs_area .content-p.last-align-left{
+		text-align-last: left;
+	}
 
 
 /* ------------ GENERAL PRINT ------------  */
@@ -265,22 +281,8 @@ sub {
 	-moz-hyphens: auto;
 	margin: 13.5pt 0;
 	line-height: 13.5pt;
-	widows: 2;
-	orphans: 3;
-}
-
-.part-intro{
-	page: partintro;
-}
-
-.part-intro .contents-container{
-	margin-top:0;
-}
-
-@page partintro{
-	@bottom-left {
-		content: none;
-	}
+/*	widows: 2;
+	orphans: 3;*/
 }
 
 /* ------------ FIN GÉNÉRAL ------------  */
@@ -325,10 +327,10 @@ figure{
 
 figcaption .figure-caption-content > div, 
 figcaption .figure-caption-content > p{
-	display: inline-block;
+	display: inline;
 }
 
-.figure-caption-source::before{
+.figure-caption-source::before, .figure-caption-authors::before{
 	content: " — ";
 }
 
@@ -336,8 +338,10 @@ figcaption,
 .contents-container figcaption,
 .contents-container figcaption p{
 	font-family: var(--font-text);
-	font-size: 7pt;
+	font-size: 6.5pt;
 	margin:0;
+	background-color: #FFF;
+	text-align: left;
 }
 
 .figure-caption-description{
@@ -356,29 +360,34 @@ figcaption,
 	margin-left: -37.5%;
 }
 
-/*.planche{
-	width: 5.5cm;
+.planche .content-figure{
+	margin:0;
 	margin-bottom: 0.5cm;
 	margin-right: 0.5cm;
-}*/
-
-.planche .content-figure{
-	/*width: 100%;*/
-	margin:0;
-	/*width: 6.8cm;*/
-	margin-bottom: 0.8cm;
-	margin-right: 0.4cm;
+	margin-left: 0.5cm;
 	page-break-inside: avoid;
 }
 
 
-.planche .content-figure .fig-landscape{
+.planche .content-figure.fig-landscape{
+	width: 6cm;
+}
+
+.planche .content-figure.fig-square{
+	width: 5cm;
+}
+
+.planche .content-figure.fig-portrait{
+	width: 4cm;
+}
+
+/*.planche .content-figure .fig-landscape + figcaption{
 	width: 8cm;
 }
 
-.planche .content-figure .fig-portrait{
+.planche .content-figure .fig-portrait + figcaption{
 	width: 5cm;
-}
+}*/
 
 /* ----------- TRAME PLUS --------------- */
 .plus{
