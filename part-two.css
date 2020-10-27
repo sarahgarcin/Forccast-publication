@@ -134,6 +134,26 @@
 
 /* ----- FIN PART TWO COLORS --------*/
 
+/* Nommer la page intro de la partie 2 pour styler les marges et numéros de pages */
+.part-intro-two{
+	page: part-intro-two;
+}
+
+.part-intro-two .contents-container{
+	margin-top:0;
+}
+
+
+@page part-intro-two{
+	@bottom-left {
+		content: none;
+		color: var(--pantone-two);
+	}
+	@bottom-right {
+   color: var(--pantone-two);
+ 	}
+}
+
 /* ----------- CONTROVERSES --------------- */
 
 .controverses{

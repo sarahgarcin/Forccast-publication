@@ -223,6 +223,7 @@ sub {
 	margin-top:22mm;
 	margin-bottom: 10.25pt;
 	margin-left: 5mm;
+	line-height: 27pt;
 }
 
 
@@ -241,9 +242,10 @@ sub {
 }
 
 .contents-container h2{
-	margin-top: 0.01cm;
-	margin-bottom: 0px;
+/*	margin-top: 0.01cm;
+	margin-bottom: 0px;*/
 	margin-left: 5mm;
+	margin-bottom:0;
 }
 
 .contents-container h2::before{
@@ -253,17 +255,31 @@ sub {
 	margin-left: -5mm;
 }
 
-.content-p +  h2, .content-atomic-container + h2, .content-ul + h2{
-	margin-top: 2mm;
+.contents-container h1 + .contents-container h2{
+	margin-top: 13.5pt; 
 }
 
-.contents-container h1 + .content-p{
+/*.contents-container h2 + .contents-container .content-p{
+	margin-top: 0;
+}*/
+
+.content-p +  h2, .content-atomic-container + h2, .content-ul + h2{
+	margin-top: 27pt;
+}
+
+
+/*h2 + .content-p{
+	margin-top: 0 !important;
+}*/
+
+/*.contents-container h1 + .content-p{
 	margin-top: 2mm;
 }
 
 .contents-container h2 + .content-p{
 	margin-top: 5pt;
-}
+}*/
+
 .contents-container h1:first-child{
 		margin-top: 0px;
 		margin-bottom: -0.75pt;
@@ -317,7 +333,7 @@ figure{
 }
 
 .content-figure figure{
-  margin: 3%,3%,3%,3%;
+  margin: 13.5pt 0;
   display: inline-grid;
 }
 
