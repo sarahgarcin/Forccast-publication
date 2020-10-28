@@ -16,6 +16,60 @@ class createTableOfContent extends Paged.Handler {
 
 // Paged.registerHandlers(createTableOfContent);
 
+
+// ------ ajout de classe sur les pages blanches  ----------
+class blankClass extends Paged.Handler {
+  constructor(chunker, polisher, caller) {
+      super(chunker, polisher, caller);
+  }
+
+  afterRendered(pages){
+    pages.forEach(page => {
+      if(page.element.classList.contains("pagedjs_blank_page")){
+        if(page.element.nextElementSibling.classList.contains('pagedjs_part-one_page')){
+          page.element.classList.add('pagedjs_part-one_page');
+        }
+        if(page.element.nextElementSibling.classList.contains('pagedjs_part-two_page')){
+          page.element.classList.add('pagedjs_part-two_page');
+        }
+        if(page.element.nextElementSibling.classList.contains('pagedjs_part-three_page')){
+          page.element.classList.add('pagedjs_part-three_page');
+        }
+        if(page.element.nextElementSibling.classList.contains('pagedjs_titrepartiepart-two_page')){
+          page.element.classList.add('pagedjs_titrepartiepart-two_page');
+        }
+        if(page.element.nextElementSibling.classList.contains('pagedjs_titrepartiepart-one_page')){
+          page.element.classList.add('pagedjs_titrepartiepart-one_page');
+        }
+        if(page.element.nextElementSibling.classList.contains('pagedjs_titrepartiepart-three_page')){
+          page.element.classList.add('pagedjs_titrepartiepart-three_page');
+        }
+
+        if(page.element.nextElementSibling.classList.contains('pagedjs_fiche_page')){
+          page.element.classList.add('pagedjs_fiche_page');
+        }
+
+
+        
+
+
+        
+      }
+    });
+    // let blanks = parsed.querySelectorAll(".pagedjs_blank_page");
+    
+    // blanks.forEach(blank => {
+    //   console.log(blank);
+    //   if(blank.nextElementSibling.classList.contains('.pagedjs_part-two_page')){
+    //     blank.classList.add('.pagedjs_part-two_page');
+    //   }
+    // });
+    
+  }
+}
+
+Paged.registerHandlers(blankClass);
+
 // ------ R A T I O    O F     I M A G E S ----------
 class imageRatio extends Paged.Handler {
     constructor(chunker, polisher, caller) {
@@ -47,22 +101,26 @@ class imageRatio extends Paged.Handler {
 
                 // calculate the ratio
                 let ratio = width / height;
-
+                var parent =  getParentByTag(image, 'figure');
                 // if the ratio is superior than 1.4, set it as a lanscape adn add a class to the image (and to the parent figure)
                 if (ratio >= 1.4) {
                     image.classList.add("landscape");
-                    image.parentNode.classList.add("fig-landscape");
+                    
+                    parent.classList.add("fig-landscape");
+                    // image.parentNode.classList.add("fig-landscape");
                 } 
                 // if the ratio is inferior than 0.8, set it as a portrait adn add a class to the image (and to the parent figure)
 
                 else if (ratio <= 0.8) {
                     image.classList.add("portrait");
-                    image.parentNode.classList.add("fig-portrait");
+                    parent.classList.add("fig-portrait");
+                    // image.parentNode.classList.add("fig-portrait");
                 } 
                 // else, if it’s between 1.39 and 0.8, add a “square” class.
                 else if (ratio < 1.39 || ratio > 0.8) {
                     image.classList.add("square");
-                    image.parentNode.classList.add("fig-square");
+                    parent.classList.add("fig-square");
+                    // image.parentNode.classList.add("fig-square");
                 }
                 // resolve the promise
                 resolve();
@@ -81,7 +139,13 @@ class imageRatio extends Paged.Handler {
             console.warn(err);
         });
     }
-}  
+} 
+
+function getParentByTag(elem, lookingFor) {
+  lookingFor = lookingFor.toUpperCase();
+  while (elem = elem.parentNode) if (elem.tagName === lookingFor) return elem;
+}
+
 
 // and we register the handler
 
@@ -294,7 +358,7 @@ class addPlus extends Paged.Handler {
   	pages.forEach(page => {
   		// console.log(page);
   		// Ajoute le nombre de plus correspondant au numéro de page positionné aléatoirement sur les interpages
-  		if(page.element.classList.contains('pagedjs_blank_page') || page.element.classList.contains('pagedjs_titrepartiepart-one_page') || page.element.classList.contains('pagedjs_fiche_first_page') || page.element.classList.contains('pagedjs_fiches_first_page')|| page.element.classList.contains('pagedjs_part-one_first_page') || page.element.classList.contains('pagedjs_part-two_first_page') || page.element.classList.contains('pagedjs_part-three_first_page')){
+  		if(page.element.classList.contains('pagedjs_blank_page') || page.element.classList.contains('pagedjs_titrepartiepart-one_page') || page.element.classList.contains('pagedjs_titrepartiepart-two_page') || page.element.classList.contains('pagedjs_titrepartiepart-three_page') || page.element.classList.contains('pagedjs_fiche_first_page') || page.element.classList.contains('pagedjs_fiches_first_page')|| page.element.classList.contains('pagedjs_part-one_first_page') || page.element.classList.contains('pagedjs_part-two_first_page') || page.element.classList.contains('pagedjs_part-three_first_page')){
 				var pageNumber = page.position + 1;
 				for(var i=0; i<=pageNumber; i++){
 					var plus = document.createElement("div");

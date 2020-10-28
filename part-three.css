@@ -110,6 +110,16 @@
 
 }
 
+/* Mettre des plus derrière le grand titre */
+.pagedjs_titrepartiepart-three_page{
+	position: relative;
+	background: var(--pantone-three);
+}
+
+.pagedjs_titrepartiepart-three_page .plus{
+	color: #FFF;
+}
+
 .part-three .ressources, 
 .part-three .ressources a, 
 .part-three .ressources-wrapper, 

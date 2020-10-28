@@ -35,21 +35,25 @@
 
 /* couleur de la page précédente*/
 /* pour les interpages de titre de partie */
-.pagedjs_titrepartiepart-two_page.pagedjs_right_page ~ .pagedjs_blank_page{
+/*.pagedjs_titrepartiepart-two_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--pantone-two);
-}
+}*/
 
 /*.pagedjs_part-two_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--pantone-two);
 }*/
 
 /* tentative de fixer le bug qui ne donne pas la classe .pagedjs_blank_page au page précédent les titres des articles*/
-.pagedjs_part-two_first_page{
+.pagedjs_part-two_first_page, 
+.pagedjs_part-two_page.pagedjs_blank_page, 
+.pagedjs_titrepartiepart-two_page.pagedjs_blank_page{
 	background: var(--pantone-two);
 	position: relative;
 }
 
-.pagedjs_part-two_first_page .plus{
+.pagedjs_part-two_first_page .plus, 
+.pagedjs_part-two_page.pagedjs_blank_page .plus, 
+.pagedjs_titrepartiepart-two_page.pagedjs_blank_page .plus{
 	color: #FFF;
 }
 
@@ -116,6 +120,16 @@
   	content: none;
  	}
 
+}
+
+/* Mettre des plus derrière le grand titre */
+.pagedjs_titrepartiepart-two_page{
+	position: relative;
+	background: var(--pantone-two);
+}
+
+.pagedjs_titrepartiepart-two_page .plus{
+	color: #FFF;
 }
 
 .part-two .ressources, 

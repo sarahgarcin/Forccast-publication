@@ -28,9 +28,9 @@
 }
 
 /* changer la couleur de fond de la page de gauche */
-.pagedjs_citation_page.pagedjs_right_page ~ .pagedjs_blank_page{
+/*.pagedjs_citation_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--noir);
-}
+}*/
 /*fix le bug ?*/
 .pagedjs_citation_first_page{
 	background: var(--noir);

@@ -109,6 +109,10 @@ blockquote{
 	font-variant-caps: all-small-caps;
 }
 
+.dont-display{
+	/*opacity: 0;*/
+}
+
 
 sup, sub {
   vertical-align: baseline;
@@ -332,6 +336,11 @@ figure{
 	page-break-inside: avoid;
 }
 
+.content-figure .fig-portrait{
+	width: 60%;
+	margin-left: 33%;
+}
+
 .content-figure figure{
   margin: 13.5pt 0;
   display: inline-grid;
@@ -350,6 +359,11 @@ figcaption .figure-caption-content > p{
 
 .figure-caption-source::before, .figure-caption-authors::before{
 	content: " — ";
+}
+
+figcaption{
+	padding: 1mm 0;
+  /*margin-top: -2mm;*/
 }
 
 figcaption,
@@ -386,13 +400,18 @@ figcaption,
 	page-break-inside: avoid;
 }
 
+.planche .content-figure-wrapper,
+.planche .content-figure img{
+	vertical-align: top;
+}
+
 
 .planche .content-figure.fig-landscape{
 	width: 6cm;
 }
 
 .planche .content-figure.fig-square{
-	width: 5cm;
+	width: 6cm;
 }
 
 .planche .content-figure.fig-portrait{
