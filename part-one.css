@@ -222,12 +222,14 @@
 	color: #FFF;
 }*/
 
-.pagedjs_fiches_first_page{
+.pagedjs_fiches_first_page,
+.pagedjs_fiches_page.pagedjs_blank_page{
 	background: var(--pantone-one);
 	position: relative;
 }
 
-.pagedjs_fiches_first_page .plus{
+.pagedjs_fiches_first_page .plus,
+.pagedjs_fiches_page.pagedjs_blank_page .plus{
 	color: #FFF;
 }
 

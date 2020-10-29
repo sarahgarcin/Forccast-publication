@@ -360,10 +360,13 @@ figcaption .figure-caption-content > p{
 
 .figure-caption-authors::before{
 	content: ", ";
+	margin-left: -0.6mm;
+
 }
 
 .figure-caption-source::before{
 	content: ", ";
+	margin-left: -0.6mm;
 }
 
 figcaption{
@@ -504,6 +507,10 @@ figcaption,
 
 .ressources-title.no-break{
 	page-break-before: avoid !important;
+}
+
+.content-p + .ressources-wrapper{
+	margin-top: 40.5pt;
 }
 
 

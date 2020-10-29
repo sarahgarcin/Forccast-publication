@@ -48,6 +48,9 @@ class blankClass extends Paged.Handler {
         if(page.element.nextElementSibling.classList.contains('pagedjs_fiche_page')){
           page.element.classList.add('pagedjs_fiche_page');
         }
+        if(page.element.nextElementSibling.classList.contains('pagedjs_fiches_page')){
+          page.element.classList.add('pagedjs_fiches_page');
+        }
 
 
         
