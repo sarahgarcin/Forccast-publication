@@ -23,6 +23,10 @@
 	height: 20cm;
 }
 
+.citation .citation-auteur{
+	font-size: 15pt;
+}
+
 .citation {
     page: citation;
 }
@@ -37,6 +41,50 @@
 }
 
 @page citation {
+	@bottom-right {
+  	content: none;
+  }
+}
+
+/* ----------- CITATIONS --------------- */
+.citation-finale{
+	color: var(--noir);
+}
+
+.citation-finale .contents-container {
+  margin-top: 0;
+}
+
+.citation-finale .content-p {
+	font-family: var(--font-title);
+	font-size: 59pt; 
+	text-align: left; 
+	width:130%;
+	margin-left: -35%;
+	margin-top: -1.8cm;
+	hyphens: none;
+	line-height: 1.2;
+	height: 20cm;
+}
+
+.citation-finale .citation-auteur{
+	font-size: 15pt;
+}
+
+.citation-finale {
+    page: citationfinale;
+}
+
+/* changer la couleur de fond de la page de gauche */
+/*.pagedjs_citation_page.pagedjs_right_page ~ .pagedjs_blank_page{
+	background: var(--noir);
+}*/
+/*fix le bug ?*/
+/*.pagedjs_citation_first_page{
+	background: var(--noir);
+}*/
+
+@page citationfinale {
 	@bottom-right {
   	content: none;
   }

@@ -9,6 +9,7 @@
 @import 'part-three.css';
 @import 'table-of-content.css';
 @import 'blank_page.css';
+@import 'ours.css';
 
 /* ------------------------- MAIN STYLE ---------------------------- */
 * {
@@ -48,7 +49,7 @@ h1, h2, h3, h4, h5, h6{
 ul li{
 	list-style: none;
 	line-height:13.5pt;
- 	margin-bottom: 0mm;
+ 	margin-bottom: 13.5pt;
 	text-align: left;
 	hyphens: auto;
 	-webkit-hyphens: auto;
@@ -69,7 +70,7 @@ ul > li > ul > li::before{
 ol li{
 	list-style: none;
 	line-height:13.5pt;
- 	margin-bottom: 0mm;
+ 	margin-bottom: 13.5pt;
 	text-align: justify;
 	hyphens: auto;
 	-webkit-hyphens: auto;
@@ -602,9 +603,15 @@ figcaption,
    page: part-noir;
 }
 
-.pagedjs_part-noir_first_page{
+.pagedjs_part-noir_first_page, 
+.pagedjs_part-noir_page.pagedjs_blank_page{
 	background: var(--noir);
 	position: relative;
+}
+
+.pagedjs_part-noir_first_page .plus,
+.pagedjs_part-noir_page.pagedjs_blank_page .plus{
+	color: #FFF;
 }
 
 /*.pagedjs_part-noir_page.pagedjs_right_page ~ .pagedjs_blank_page{

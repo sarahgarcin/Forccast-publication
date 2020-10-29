@@ -1,7 +1,7 @@
 /* --------------------------- PART THREE ------------------------------  */
 /* envoyer les titres courant pour cette partie */
 .pagedjs_titrepartiepart-three_page h2.edition-block-title {string-set: threetitle content(text) }
-.pagedjs_part-three_page h3.edition-block-title {string-set: threesubtitle content(text) }
+.pagedjs_part-three_page h4.edition-block-title {string-set: threesubtitle content(text) }
 
 /* Nommer la page pour styler les marges et numéros de pages */
 .part-three{
@@ -26,21 +26,25 @@
 }*/
 
 /* couleur de la page précédente*/
-.pagedjs_titrepartiepart-three_page.pagedjs_right_page ~ .pagedjs_blank_page{
+/*.pagedjs_titrepartiepart-three_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--pantone-three);
-}
+}*/
 
 /*.pagedjs_part-three_page.pagedjs_right_page ~ .pagedjs_blank_page{
 	background: var(--pantone-three);
 }*/
 
 /* tentative de fixer le bug qui ne donne pas la classe .pagedjs_blank_page au page précédent les titres des articles*/
-.pagedjs_part-three_first_page{
+.pagedjs_part-three_first_page, 
+.pagedjs_titrepartiepart-three_page.pagedjs_blank_page,
+.pagedjs_part-three_page.pagedjs_blank_page{
 	background: var(--pantone-three);
 	position: relative;
 }
 
-.pagedjs_part-three_first_page .plus{
+.pagedjs_part-three_first_page .plus,
+.pagedjs_titrepartiepart-three_page.pagedjs_blank_page .plus,
+.pagedjs_part-three_page.pagedjs_blank_page .plus{
 	color: #FFF;
 }
 
@@ -48,11 +52,16 @@
 	color: var(--pantone-three);
 }
 
+.part-three ul li::before{
+	color: var(--pantone-three);
+}
+
+
 .part-three .content-ol li::marker {
   color: var(--pantone-three);
 }
 
-.part-three .content-ol li::before{
+.part-three .content-ol li::before, .part-three ol li::before{
 	color: var(--pantone-three);
 }
 
@@ -136,47 +145,48 @@
 
 /* ----- FIN PART THREE COLORS --------*/
 
+/* Nommer la page intro de la partie 2 pour styler les marges et numéros de pages */
+.part-intro-three{
+	page: part-intro-three;
+}
+
+.part-intro-three .contents-container{
+	margin-top:0;
+}
+
+
+@page part-intro-three{
+	@bottom-left {
+		content: none;
+		color: var(--pantone-three);
+	}
+	@bottom-right {
+   color: var(--pantone-three);
+ 	}
+}
 
 /* ----------- Enquetes --------------- */
-.enquetes{
+.enquetes, .enquete{
 	break-before: page;
-}
-/* Menu / Sommaire pour chaque thème */
-
-.enquetes .tableofcontents-block-title {
- position:relative;
- top:0;
- left:0;
- width:140%;
- color:var(--pantone-three);
- font-size:13pt;
- text-align:left;
- text-align-last:left;
- margin:0.6cm 0 0.6cm -47.3%;
-}
-.enquetes .tableofcontents-block-title ul {
- padding:0
-}
-.enquetes .tableofcontents-block-title li {
- display:block;
- color:black; /* color:var(-pantone-three); si texte noir */
- margin-bottom:0.15cm
-}
-.enquetes .tableofcontents-block-title li::before{
- color:var(--pantone-three);
 }
 /* FIN Menu / Sommaire pour chaque thème */
 
-.enquetes h4.edition-block-title, .fiche h5.edition-block-title{
+/* faire commencer les articles sur la page de droite */
+.enquete h4.edition-block-title{
+	page-break-before: always;
+	break-before: right;
+}
+
+/*.enquetes h4.edition-block-title, .fiche h5.edition-block-title{
 	break-before: avoid;
 }
 
-.enquête h5.edition-block-title{
+.enquete h5.edition-block-title{
 	font-size: 18pt;
 	page-break-before: always;
 	width: 100%;
 	margin-left: 0;
-}
+}*/
 
 /*.fiche h5.edition-block-title::before{
 	content:"+";
@@ -184,7 +194,7 @@
 }*/
 
 
-.enquête .contents-container{
+.enquete .contents-container{
 	margin-top: 1.5cm;
 }
 
@@ -221,7 +231,7 @@
 
 .tutoriel-wrapper{
 	width: 105%;
-	margin-left: -20%;
+	margin-left: -21%;
   background-color: #FFF;
   z-index: 20;
   position: absolute;
@@ -240,6 +250,17 @@
 	content:none;
 }
 
+
+.contents-container .tutoriel-wrapper h3{
+	margin-top: 0;
+	margin-bottom: 13.5pt;
+	font-family: "HK Grotesk";
+	font-weight: bold;
+}
+
+.contents-container .tutoriel-wrapper .content-p + h3{
+	margin-top: 13.5pt;
+}
 
 
 .content-title.tutoriel-title em, .content-title.tutoriel-title{

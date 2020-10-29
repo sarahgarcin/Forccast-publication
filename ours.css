@@ -1,0 +1,7 @@
+.ours{
+   page: ours;
+}
+
+.ours h2.edition-block-title, .credits h2.edition-block-title{
+	break-before: none;
+}
