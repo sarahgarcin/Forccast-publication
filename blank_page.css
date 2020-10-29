@@ -67,6 +67,7 @@
 .page-titre-one .contents-container h1{
 	font-size: var(--size-title);
 	margin-left: 0;
+	margin-top:0;
 }
 
 
@@ -79,7 +80,7 @@
 .page-titre-one .contents-container h2{
 	margin-left: 0;
 	font-size: 15pt; 
-	margin-top: 2cm; 
+	margin-top: 0; 
 	margin-bottom: 2cm;
 }
 
@@ -88,6 +89,23 @@
 	margin: 0;
 
 }
+
+.pagedjs_pagetitreone_page{
+	position: relative;
+}
+
+.logos-wrapper{
+	position: absolute;
+	bottom: 0;
+}
+
+.logos-wrapper figure{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5mm;
+}
+
+
 
 @page noir{
 	@bottom-right {

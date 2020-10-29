@@ -137,14 +137,6 @@ sub {
 	text-align-last: left;
 }
 
-.logos-wrapper{
-	/*margin-top: 5cm;*/
-}
-
-.logos-wrapper figure{
-	display: inline-block;
-}
-
 
 /* ------------ GENERAL PRINT ------------  */
 @page {
