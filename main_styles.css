@@ -242,22 +242,27 @@ sub {
 
 .contents-container h1::before{
 	content:"+";
-	margin-right: 0.2cm;
+	margin-right: 0.22cm;
 	margin-left: -7mm;
 }
 
 .contents-container h2{
-/*	margin-top: 0.01cm;
-	margin-bottom: 0px;*/
-	margin-left: 5mm;
+	margin-left: 7mm;
 	margin-bottom:0;
 }
 
 .contents-container h2::before{
 	content:"++";
-	/*margin-left: -0.45cm;*/
-	margin-right: 1mm;
-	margin-left: -5mm;
+	margin-right: 0.32cm;
+	margin-left: -7mm;
+}
+
+.contents-container h2:first-child{
+	margin-top: 0;
+}
+
+.contents-container .content-p + h2:first-child{
+	margin-top:27pt;
 }
 
 .contents-container h1 + .contents-container h2{
@@ -337,13 +342,14 @@ figure{
 	page-break-inside: avoid;
 }
 
-.content-figure .fig-portrait{
+/*.content-figure .fig-portrait{
 	width: 60%;
 	margin-left: 33%;
-}
+}*/
 
 .content-figure figure{
-  margin: 13.5pt 0;
+  /*margin: 13.5pt 0;*/
+  margin: 0;
   display: inline-grid;
 }
 
