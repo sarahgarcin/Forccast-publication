@@ -125,10 +125,6 @@ sub {
   top: 0.4em; 
 }
 
-.ours .content-p{
-	font-size: 9pt;
-}
-
 /* tentative de résoudre le bug des hyphens last qui ne se coupent pas d'une page à l'autre */
 .pagedjs_area .content-p:last-child{
 	text-align-last: justify;

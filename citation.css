@@ -48,7 +48,8 @@
 
 /* ----------- CITATIONS --------------- */
 .citation-finale{
-	color: var(--noir);
+	color: var(--pantone-three);
+	break-before: left;
 }
 
 .citation-finale .contents-container {
