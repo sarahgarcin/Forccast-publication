@@ -50,7 +50,7 @@ ul li{
 	list-style: none;
 	line-height:13.5pt;
  	margin-bottom: 13.5pt;
-	text-align: left;
+	text-align: justify;
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -132,6 +132,10 @@ sub {
 
 .pagedjs_area .content-p.last-align-left{
 	text-align-last: left;
+}
+
+.pagedjs_area .content-p.last-align-right{
+	text-align-last: right;
 }
 
 
@@ -476,11 +480,12 @@ figcaption,
 .footnote-ref sup{
 	font-size: 7pt;
 	pointer-events: none;
-	margin-left: 1px;
+	/*margin-left: 1px;*/
 	vertical-align: top;
 	position: relative;
 	top:-1px;
-	font-weight: bold;
+	margin-right: -1px;
+	/*font-weight: bold;*/
 }
 
 .note-call_footnote-p{

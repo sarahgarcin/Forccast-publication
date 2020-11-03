@@ -144,6 +144,12 @@
 	break-before: page;
 }*/
 
+/* couleurs des auteurs */
+.part-two .article-author{
+	color: var(--pantone-two);
+	text-align: right;
+	margin-top: 1cm;
+}
 
 
 /* ----- FIN PART TWO COLORS --------*/

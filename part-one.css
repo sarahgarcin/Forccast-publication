@@ -171,7 +171,12 @@
 	break-before: page;
 }*/
 
-
+/* couleurs des auteurs */
+.part-one .article-author{
+	color: var(--pantone-one);
+	text-align: right;
+	margin-top: 1cm;
+}
 
 /* ----- FIN PART ONE COLORS --------*/
 
