@@ -118,11 +118,15 @@ blockquote{
 sup, sub {
   vertical-align: baseline;
   position: relative;
-  /*top: -0.4em;*/
+  top: -0.4em;
 }
 
 sub { 
   top: 0.4em; 
+}
+
+.small-caps + sup{
+	font-size: 7pt;
 }
 
 /* tentative de résoudre le bug des hyphens last qui ne se coupent pas d'une page à l'autre */
@@ -468,6 +472,7 @@ figcaption,
 	hyphens: manual;
 	font-family: "HK Grotesk", sans-serif;
 	font-weight: normal;
+	top: auto;
 	/*margin-top: -3.7mm;*/
 
 }
