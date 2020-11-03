@@ -13,7 +13,7 @@
 
 .pagedjs_trameplus_page{
 	position: relative;
-	background-color: var(--noir);
+	/*background-color: var(--noir);*/
 }
 
 .plus-trame-container{
@@ -27,7 +27,7 @@
 }
 
 .plus-trame{
-	color: #FFF;
+	color: #000;
 	line-height: 0.8;
 	font-size: 47pt;	
 	padding: 3px;

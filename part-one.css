@@ -175,6 +175,7 @@
 .part-one .article-author{
 	color: var(--pantone-one);
 	text-align: right;
+	text-align-last: right;
 	margin-top: 1cm;
 }
 

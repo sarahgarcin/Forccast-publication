@@ -146,6 +146,7 @@
 	color: var(--pantone-three);
 	text-align: right;
 	margin-top: 1cm;
+	text-align-last: right;
 }
 
 /* ----- FIN PART THREE COLORS --------*/
