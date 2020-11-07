@@ -56,6 +56,10 @@
 	color: var(--pantone-three);
 }
 
+ .part-three .tableofcontents-block-title ul li::before{
+ 	color: #FFF;
+ }
+
 
 .part-three .content-ol li::marker {
   color: var(--pantone-three);
