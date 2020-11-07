@@ -683,9 +683,10 @@ figcaption,
 
 .tableofcontents-block-title li::before{
 	content:' +';
-	 font-weight:800;
-	  font-family: var(--font-text);
-	  margin-right:4px;
+	font-weight:800;
+	font-family: var(--font-text);
+	 margin-right:4px;
+	 color: #FFF;
 }
 
 .fiches .tableofcontents-block-title{
