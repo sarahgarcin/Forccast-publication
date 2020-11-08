@@ -98,12 +98,13 @@ a{
 }
 
 blockquote{
-	text-align: left; 
+	text-align: justify; 
 	margin-right: 0;
 	font-size: 9.5pt;
 	line-height: 13.5pt;
+	margin-top: 0;
 	/*margin-top: 13.5pt;*/
-	/*margin-bottom: 13.5pt;*/
+	margin-bottom: 13.5pt;
 }
 
 .small-caps{
@@ -119,6 +120,7 @@ sup, sub {
   vertical-align: top;
   position: relative;
   top: -0.4em;
+  font-size: 7pt;
 }
 
 sub { 
@@ -226,6 +228,10 @@ sub {
 	margin-top: 1.55cm;
 }
 
+h3 + .tableofcontents-block-title + div > .contents-container{
+	margin-top: 1.37cm;
+}
+
 .tableofcontents-block-title{
 	/*break-after: always;*/
 }
@@ -297,6 +303,10 @@ sub {
 
 .content-p +  h2, .content-atomic-container + h2, .content-ul + h2{
 	margin-top: 27pt;
+}
+
+.contents-container .content-p + blockquote{
+	margin-bottom: 13.5pt;
 }
 
 
