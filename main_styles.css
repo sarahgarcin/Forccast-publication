@@ -116,7 +116,7 @@ blockquote{
 
 
 sup, sub {
-  vertical-align: baseline;
+  vertical-align: top;
   position: relative;
   top: -0.4em;
 }
@@ -128,6 +128,15 @@ sub {
 .small-caps + sup{
 	font-size: 7pt;
 }
+
+/*	font-size: 7pt;
+	pointer-events: none;
+	margin-left: 0.02cm;
+	vertical-align: top;
+	position: relative;
+	top:-1px;
+	margin-right: -1px;
+	font-weight: bold;*/
 
 /* tentative de résoudre le bug des hyphens last qui ne se coupent pas d'une page à l'autre */
 .pagedjs_area .content-p:last-child{
@@ -209,13 +218,21 @@ sub {
 	margin-top: 2mm;
 }
 
+.edition-block-title + div > .contents-container{
+	margin-top: 1.89cm;
+}
+
+.edition-block-subtitle + div > .contents-container{
+	margin-top: 1.55cm;
+}
+
 .tableofcontents-block-title{
 	/*break-after: always;*/
 }
 
 /* container de texte */
 .contents-container{
- margin-top: 1.5cm;
+ /*margin-top: 1.55cm;*/
 }
 
 /* titres dans le texte */
@@ -230,7 +247,7 @@ sub {
 
 .contents-container h1{
 	font-size: 18pt;
-	margin-top:40.5pt;
+	margin-top:33pt;
 	margin-bottom: 10.25pt;
 	margin-left: 7mm;
 	line-height: 1.2;
@@ -312,8 +329,8 @@ sub {
 	-moz-hyphens: auto;
 	margin: 13.5pt 0;
 	line-height: 13.5pt;
-/*	widows: 2;
-	orphans: 3;*/
+/*	orphans: 3;
+	widows: 3;*/
 }
 
 /* ------------ FIN GÉNÉRAL ------------  */
@@ -322,7 +339,9 @@ sub {
 /* ------------ GENERAL LIST ------------  */
 .content-ul{
 	padding-left: 1cm;
-	hyphens: none
+	hyphens: auto;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
 }
 
 .content-ul li{

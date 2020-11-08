@@ -443,7 +443,7 @@ class marginNotes extends Paged.Handler {
     /* NOTE FLOAT ---------------------------------------------------------------------------------- */
 
     let positionRight = 'left: calc(var(--pagedjs-pagebox-width) - var(--pagedjs-margin-left) - var(--pagedjs-margin-right) - 1px); width: var(--pagedjs-margin-right);';
-    let positionLeft = 'left: calc(var(--pagedjs-margin-left)*-1 - 1px); width: var(--pagedjs-margin-left);'
+    let positionLeft = 'left: calc(var(--pagedjs-margin-left)*-1 + 4px); width: calc(var(--pagedjs-margin-left) - 4px);'
 
     let notePosition;
 
