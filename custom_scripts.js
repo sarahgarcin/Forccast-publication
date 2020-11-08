@@ -372,7 +372,7 @@ class addPlus extends Paged.Handler {
 					plus.innerHTML = '+';
 					plus.classList.add("plus");
 					var randomX = Math.floor(Math.random()*600);
-					var randomY = Math.floor(Math.random()*770);
+					var randomY = Math.floor(Math.random()*750);
 					plus.style.top = randomY + "px";
 					plus.style.left = randomX + "px";
 					page.element.appendChild(plus);
