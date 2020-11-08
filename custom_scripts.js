@@ -14,7 +14,8 @@ class createTableOfContent extends Paged.Handler {
     
   }
 
-Paged.registerHandlers(createTableOfContent);
+// Paged.registerHandlers(createTableOfContent);
+
 
 
 // ------ ajout de classe sur les pages blanches  ----------

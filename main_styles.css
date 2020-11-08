@@ -485,12 +485,13 @@ figcaption,
 .footnote-ref sup{
 	font-size: 7pt;
 	pointer-events: none;
-	/*margin-left: 1px;*/
+	margin-left: 0.02cm;
 	vertical-align: top;
 	position: relative;
 	top:-1px;
 	margin-right: -1px;
-	/*font-weight: bold;*/
+	font-weight: bold;
+	/*font-family: sans-serif;*/
 }
 
 .note-call_footnote-p{
