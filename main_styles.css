@@ -731,7 +731,7 @@ figcaption sup,
 }
 
 .tableofcontents-block-title li::before{
-	/*content:' +';*/
+	content:' +';
 	font-weight:800;
 	font-family: var(--font-text);
 	margin-right:4px;
