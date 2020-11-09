@@ -71,7 +71,7 @@
 }
 
 /* couleur des notes */
-.ouverture .footnote{
+.ouverture .footnote, .part-noir .footnote{
 	color: var(--noir);
 	opacity: 0.8;
 }
