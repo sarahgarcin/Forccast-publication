@@ -111,9 +111,9 @@ blockquote{
 	margin-bottom: 13.5pt;
 }
 
-.content-p blockquote{
+/*.content-p blockquote{
 	margin-top: 13.5pt;
-}
+}*/
 
 .small-caps{
 	font-variant-caps: all-small-caps;
@@ -385,6 +385,11 @@ h3 + .tableofcontents-block-title + div > .contents-container{
 figure{
 	margin:0;
 }
+
+.content-atomic-container + .content-atomic-container{
+	margin-top: 27pt;
+}
+
 .content-figure{
 	margin:0;
 	width: 130%;
