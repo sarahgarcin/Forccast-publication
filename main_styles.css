@@ -551,6 +551,11 @@ figcaption sup,
 	/*font-family: sans-serif;*/
 }
 
+.footnote-p sup{
+	font-size: 5pt;
+	top:0;
+}
+
 .note-call_footnote-p{
 	display: none;
 }
