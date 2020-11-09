@@ -25,7 +25,7 @@
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
     color: var(--pantone-two);
-    content: 'Controverses -> ' string(twosubtitle);
+    content: 'Les controverses -> ' string(twosubtitle);
   }
 }
 
