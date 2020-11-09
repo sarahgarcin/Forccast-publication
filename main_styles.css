@@ -111,6 +111,10 @@ blockquote{
 	margin-bottom: 13.5pt;
 }
 
+.content-p blockquote{
+	margin-top: 13.5pt;
+}
+
 .small-caps{
 	font-variant-caps: all-small-caps;
 }
