@@ -39,6 +39,7 @@
 #list-toc-generated .toc-element{
     padding-left: 0.2cm;
     padding-right: 0.2cm;
+    margin:0;
 }
 
 #list-toc-generated .toc-element-level-1{
@@ -59,7 +60,7 @@
 .pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(13),
 .pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(15)
 {
-    display: none;
+    /*display: none;*/
 }
 
 #list-toc-generated .toc-element a{ 

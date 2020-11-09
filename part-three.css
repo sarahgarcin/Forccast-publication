@@ -56,7 +56,7 @@
 	color: var(--pantone-three);
 }
 
- .part-three .tableofcontents-block-title ul li::before{
+ .part-three .tableofcontents-block-title li::before{
  	color: #FFF;
  }
 
@@ -204,9 +204,9 @@
 }*/
 
 
-.enquete .contents-container{
+/*.enquete .contents-container{
 	margin-top: 1.5cm;
-}
+}*/
 
 .enquetes .content-p{
 	font-style: italic;

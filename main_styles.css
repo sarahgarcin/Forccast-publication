@@ -66,6 +66,10 @@ ul > li > ul > li::before{
 	margin-right: 1mm;
 }
 
+ol{
+	padding-left: 3mm;
+}
+
 
 ol li{
 	list-style: none;
@@ -211,6 +215,7 @@ sub {
 	margin: 0;
 	margin-left: -40mm;
 	hyphens: none;
+	line-height: 1.16;
 }
 
 .edition-block-subtitle{
@@ -221,7 +226,7 @@ sub {
 }
 
 .edition-block-title + div > .contents-container{
-	margin-top: 1.89cm;
+	margin-top: 1.95cm;
 }
 
 .edition-block-subtitle + div > .contents-container{
@@ -260,9 +265,9 @@ h3 + .tableofcontents-block-title + div > .contents-container{
 }
 
 
-.contents-container h1:first-child{
+/*.contents-container h1:first-child{
 	margin-top: 0;
-}
+}*/
 
 .contents-container .content-p + h1:first-child{
 	margin-top:40.5pt;
@@ -323,8 +328,8 @@ h3 + .tableofcontents-block-title + div > .contents-container{
 }*/
 
 .contents-container h1:first-child{
-		margin-top: 0px;
-		margin-bottom: -0.75pt;
+		margin-top: -2.5mm;
+/*		margin-bottom: -0.75pt;*/
 }
 .contents-container .content-p:first-child{
 	margin-top: 0px;
@@ -348,10 +353,17 @@ h3 + .tableofcontents-block-title + div > .contents-container{
 
 /* ------------ GENERAL LIST ------------  */
 .content-ul{
-	padding-left: 1cm;
+	/*padding-left: 1cm;*/
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
+	padding-left: 0;
+	margin: 0 0 13.5pt 0;
+	line-height: 13.5pt;
+}
+
+.content-p .content-ul{
+	margin-top: 13.5pt ;
 }
 
 .content-ul li{
@@ -719,10 +731,10 @@ figcaption sup,
 }
 
 .tableofcontents-block-title li::before{
-	content:' +';
+	/*content:' +';*/
 	font-weight:800;
 	font-family: var(--font-text);
-	 margin-right:4px;
+	margin-right:4px;
 }
 
 .fiches .tableofcontents-block-title{
