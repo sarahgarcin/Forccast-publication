@@ -348,8 +348,6 @@ h3 + .tableofcontents-block-title + div > .contents-container{
 	-moz-hyphens: auto;
 	margin: 13.5pt 0;
 	line-height: 13.5pt;
-/*	orphans: 3;
-	widows: 3;*/
 }
 
 /* ------------ FIN GÉNÉRAL ------------  */
