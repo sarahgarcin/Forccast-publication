@@ -348,6 +348,7 @@ h3 + .tableofcontents-block-title + div > .contents-container{
 	-moz-hyphens: auto;
 	margin: 13.5pt 0;
 	line-height: 13.5pt;
+	word-spacing: 0.02ch
 }
 
 /* ------------ FIN GÉNÉRAL ------------  */
