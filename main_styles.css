@@ -407,7 +407,7 @@ figure{
   /*margin: 13.5pt 0;*/
   margin: 0;
   display: inline-grid;
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .content-figure img {
