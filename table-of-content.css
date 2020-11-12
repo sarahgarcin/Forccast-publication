@@ -23,7 +23,14 @@
   margin-left: -37.5%;
 /*  overflow-y: hidden;*/
   padding: 0;
+  margin-top: 1.5cm;
 }
+
+.pagedjs_right_page.pagedjs_sommaire_page ul[data-id="list-toc-generated"]{
+    
+    margin-top: 2.08cm !important;
+}
+
 
 #list-toc-generated .toc-element a::before{
     content: target-counter(attr(href), page);
@@ -34,6 +41,7 @@
     font-weight: bold;
     /*color: #FFF;*/
     color: var(--noir);
+    margin-top:1mm;
 }
 
 #list-toc-generated .toc-element{
@@ -55,9 +63,13 @@
 .pagedjs_sommaire_first_page #list-toc-generated .toc-element-level-1:nth-child(6),
 .pagedjs_sommaire_first_page #list-toc-generated .toc-element-level-1:nth-child(7),
 .pagedjs_sommaire_first_page #list-toc-generated .toc-element-level-1:nth-child(8), 
+.pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(8),
+.pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(7),
 .pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(12),
 .pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(13),
-.pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(15)
+.pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(14),
+.pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(15), 
+.pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(16)
 {
     display: none;
 }
@@ -90,11 +102,11 @@
 
 /* Marges sur chaque partie */
 
-.pagedjs_sommaire_first_page #list-toc-generated .toc-element-level-1:nth-child(12),
-.pagedjs_sommaire_first_page #list-toc-generated .toc-element-level-1:nth-child(25),
-.pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(10){
-    margin-top: 13.5pt;
-}
+// .pagedjs_sommaire_first_page #list-toc-generated .toc-element-level-1:nth-child(12),
+// .pagedjs_sommaire_first_page #list-toc-generated .toc-element-level-1:nth-child(25),
+// .pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(10){
+//     margin-top: 13.5pt;
+// }
 
 /* --- C O L O R S --- */
 .pagedjs_sommaire_first_page #list-toc-generated .toc-element-level-1:nth-child(9) a,
@@ -154,6 +166,7 @@
     margin-top: 1.1cm;
 }
 
+.pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(9) a,
 .pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(10) a,
 .pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(11) a,
 .pagedjs_right_page.pagedjs_sommaire_page #list-toc-generated .toc-element:nth-child(12) a,

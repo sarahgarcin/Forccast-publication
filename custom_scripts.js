@@ -14,7 +14,7 @@ class createTableOfContent extends Paged.Handler {
     
   }
 
-//Paged.registerHandlers(createTableOfContent);
+Paged.registerHandlers(createTableOfContent);
 
 
 
@@ -63,15 +63,6 @@ class blankClass extends Paged.Handler {
         
       }
     });
-    // let blanks = parsed.querySelectorAll(".pagedjs_blank_page");
-    
-    // blanks.forEach(blank => {
-    //   console.log(blank);
-    //   if(blank.nextElementSibling.classList.contains('.pagedjs_part-two_page')){
-    //     blank.classList.add('.pagedjs_part-two_page');
-    //   }
-    // });
-    
   }
 }
 
@@ -385,7 +376,7 @@ class addPlus extends Paged.Handler {
 				var plusContainer = document.createElement("div");
 				plusContainer.classList.add("plus-tutoriel-container");
 				page.element.appendChild(plusContainer);
-				console.log(plusContainer);
+				// console.log(plusContainer);
 				for(var i=0; i<=4619; i++){
 					var plus = document.createElement("div");
 					plus.innerHTML = '+';
@@ -529,7 +520,7 @@ class marginNotes extends Paged.Handler {
       let maxHeight = pageElement.querySelectorAll(".pagedjs_page_content")[0].offsetHeight;
 
       if (allHeight > maxHeight) {
-        console.log("doesn't fit");
+        // console.log("doesn't fit");
 
         /* IF DOESN'T FIT ----------------------------------------------------------------------------- */
 
@@ -547,7 +538,7 @@ class marginNotes extends Paged.Handler {
         noteOverflow = true;
 
       } else {
-        console.log("fit");
+        // console.log("fit");
         /* PUSH DOWN ---------------------------------------------------- */
         for (let i = 0; i < notes.length; ++i) {
           if (i >= 1) {
@@ -557,7 +548,7 @@ class marginNotes extends Paged.Handler {
             let notePrevBottom = notePrev.offsetTop - marginNoteTop(notePrev) + notePrev.offsetHeight + newMargin + 5;
             // Push down the note to bottom if it's over the previous one 
             if (notePrevBottom > noteTop) {
-              console.log("overflow");
+              // console.log("overflow");
               notes[i].style.top = notePrevBottom +  "px";
             }
           }

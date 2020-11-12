@@ -383,6 +383,7 @@ h3 + .tableofcontents-block-title + div > .contents-container{
 /* ------------ GENERAL IMAGES ------------  */
 figure{
 	margin:0;
+	box-sizing: border-box;
 }
 
 .content-atomic-container + .content-atomic-container{
@@ -394,6 +395,7 @@ figure{
 	width: 130%;
 	margin-left: -30%;
 	page-break-inside: avoid;
+	box-sizing: border-box;
 }
 
 /*.content-figure .fig-portrait{
@@ -405,12 +407,14 @@ figure{
   /*margin: 13.5pt 0;*/
   margin: 0;
   display: inline-grid;
+   box-sizing: border-box;
 }
 
 .content-figure img {
   mix-blend-mode: screen;
   filter: grayscale(100%) contrast(110%) brightness(115%);
   opacity: 1;
+  box-sizing: border-box;
 }
 
 figcaption .figure-caption-content > div, 

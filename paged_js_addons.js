@@ -3,29 +3,29 @@
 /**
  * DOM observer use to retrigger the resize script when changing content in the page
  */
-if (!window.observeDOM) {
-window.observeDOM = ( function() {
-    const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+// if (!window.observeDOM) {
+// window.observeDOM = ( function() {
+//     const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
-    return function( obj, callback ) {
-      if ( !obj || !obj.nodeType === 1 ) return; // validation
+//     return function( obj, callback ) {
+//       if ( !obj || !obj.nodeType === 1 ) return; // validation
 
-      if ( MutationObserver ) {
-        // define a new observer
-        const obs = new MutationObserver( function( mutations, observer ) {
-            callback( mutations );
-        } );
-        // have the observer observe foo for changes in children
-        obs.observe( obj, { childList: true, subtree: true } );
-      }
+//       if ( MutationObserver ) {
+//         // define a new observer
+//         const obs = new MutationObserver( function( mutations, observer ) {
+//             callback( mutations );
+//         } );
+//         // have the observer observe foo for changes in children
+//         obs.observe( obj, { childList: true, subtree: true } );
+//       }
 
-      else if ( window.addEventListener ) {
-        obj.addEventListener( 'DOMNodeInserted', callback, false );
-        obj.addEventListener( 'DOMNodeRemoved', callback, false );
-      }
-    };
-  } )();
-}
+//       else if ( window.addEventListener ) {
+//         obj.addEventListener( 'DOMNodeInserted', callback, false );
+//         obj.addEventListener( 'DOMNodeRemoved', callback, false );
+//       }
+//     };
+//   } )();
+// }
 
 if ( window.Paged ) {
 
@@ -68,61 +68,61 @@ if ( window.Paged ) {
           }
         }
 
-        afterParsed() {
-          console.info( 'parsing finished, rendering the pages' );
-          console.group( 'rendering pages' );
-          if (window.Toastify) {
-            Toastify( {
-              text: 'Rendering pages',
-              duration: 2000
-            } ).showToast();
-          }
+        // afterParsed() {
+        //   console.info( 'parsing finished, rendering the pages' );
+        //   console.group( 'rendering pages' );
+        //   if (window.Toastify) {
+        //     Toastify( {
+        //       text: 'Rendering pages',
+        //       duration: 2000
+        //     } ).showToast();
+        //   }
           
-        }
+        // }
 
-        afterPageLayout( pageFragment, page, breakToken ) {
-          console.info( 'page %s is rendered', page.position + 1 );
-          if (page.position%20 === 0 && page.position && Toastify) {
-            Toastify( {
-              text: 'Rendering pages : ' + (page.position) + '/?',
-              duration: 1000
-            } ).showToast();
-          }
+        // afterPageLayout( pageFragment, page, breakToken ) {
+        //   console.info( 'page %s is rendered', page.position + 1 );
+        //   if (page.position%20 === 0 && page.position && Toastify) {
+        //     Toastify( {
+        //       text: 'Rendering pages : ' + (page.position) + '/?',
+        //       duration: 1000
+        //     } ).showToast();
+        //   }
 
-          function hasItemParent( node ) {
-            if ( node.parentElement === null ) {
-              return false;
-            }
-          else {
-              if ( node.parentElement.tagName === 'LI' ) {
-                return true;
-              }
-            else {
-                return hasItemParent( node.parentElement );
-              }
-            }
-          }
+        //   function hasItemParent( node ) {
+        //     if ( node.parentElement === null ) {
+        //       return false;
+        //     }
+        //   else {
+        //       if ( node.parentElement.tagName === 'LI' ) {
+        //         return true;
+        //       }
+        //     else {
+        //         return hasItemParent( node.parentElement );
+        //       }
+        //     }
+        //   }
 
-          /*
-           * If a li item is broken, we store the reference of the p child element
-           * see https://github.com/rstudio/pagedown/issues/23#issue-376548000
-           */
-          if ( breakToken !== undefined ) {
-            if ( breakToken.node.nodeName === '#text' && hasItemParent( breakToken.node ) ) {
-              this.splittedParagraphRefs.push( breakToken.node.parentElement.dataset.ref );
-            }
-          }
-        }
+        //   /*
+        //    * If a li item is broken, we store the reference of the p child element
+        //    * see https://github.com/rstudio/pagedown/issues/23#issue-376548000
+        //    */
+        //   if ( breakToken !== undefined ) {
+        //     if ( breakToken.node.nodeName === '#text' && hasItemParent( breakToken.node ) ) {
+        //       this.splittedParagraphRefs.push( breakToken.node.parentElement.dataset.ref );
+        //     }
+        //   }
+        // }
 
         // en conflit avec le script margin notes ! à remettre pour les notes de bas de pages 
         afterRendered( pages ) {
           console.groupEnd( 'rendering pages' );
-          if (window.Toastify) {
-            Toastify( {
-              text: `Attaching footnotes to ${ pages.length } pages`,
-              duration: 1000
-            } ).showToast();
-          }
+          // if (window.Toastify) {
+          //   Toastify( {
+          //     text: `Attaching footnotes to ${ pages.length } pages`,
+          //     duration: 1000
+          //   } ).showToast();
+          // }
           console.info( 'rendering done, attaching footnotes to %s pages', pages.length );
           let footnoteIndex = 0;
           for ( const page of pages ) {
@@ -196,71 +196,71 @@ if ( window.Paged ) {
           /**
            * If overflow adjustments handle them
            */
-          const noOverflow = document.querySelectorAll('.pagedjs_no-page-overflow-y');
-          // hacky : retrieving pages transform to apply it to overflow adjustments
-          let pageScale = 1;
-          const pagesContainer = document.querySelector( '.pagedjs_pages' )
-          if (pagesContainer && pagesContainer.style.transform && pagesContainer.style.transform.match(/scale\((.+)\)/)) {
-            pageScale = +pagesContainer.style.transform.match(/scale\((.+)\)/)[1];
-          }
-          [].forEach.call(noOverflow, (before, index1) => {
-            [].forEach.call(noOverflow, (after, index2) => {
-              if (index1 < index2) {
-                if (before.parentNode.parentNode === after.parentNode.parentNode) {
-                  const {top: yBefore, height: hBefore} = before.getBoundingClientRect();
-                  const {top: yAfter, height: hAfter} = after.getBoundingClientRect();
-                  if (yAfter >= yBefore && yAfter <= (yBefore + hBefore)) {
-                    const absY = ((yAfter - yBefore) + hBefore) / pageScale;
-                    before.parentNode.style.position = 'relative';
-                    after.parentNode.style.position = 'relative';
-                    after.style.top = absY + 'px';
-                    console.log({yBefore, yAfter, hBefore})
-                  }
-                }
-              }
-            })
-          })
-          if(Toastify) {
-            Toastify( {
-              text: 'Rendering finished !',
-              duration: 3000
-            } ).showToast();
-          }
+          // const noOverflow = document.querySelectorAll('.pagedjs_no-page-overflow-y');
+          // // hacky : retrieving pages transform to apply it to overflow adjustments
+          // let pageScale = 1;
+          // const pagesContainer = document.querySelector( '.pagedjs_pages' )
+          // if (pagesContainer && pagesContainer.style.transform && pagesContainer.style.transform.match(/scale\((.+)\)/)) {
+          //   pageScale = +pagesContainer.style.transform.match(/scale\((.+)\)/)[1];
+          // }
+          // [].forEach.call(noOverflow, (before, index1) => {
+          //   [].forEach.call(noOverflow, (after, index2) => {
+          //     if (index1 < index2) {
+          //       if (before.parentNode.parentNode === after.parentNode.parentNode) {
+          //         const {top: yBefore, height: hBefore} = before.getBoundingClientRect();
+          //         const {top: yAfter, height: hAfter} = after.getBoundingClientRect();
+          //         if (yAfter >= yBefore && yAfter <= (yBefore + hBefore)) {
+          //           const absY = ((yAfter - yBefore) + hBefore) / pageScale;
+          //           before.parentNode.style.position = 'relative';
+          //           after.parentNode.style.position = 'relative';
+          //           after.style.top = absY + 'px';
+          //           console.log({yBefore, yAfter, hBefore})
+          //         }
+          //       }
+          //     }
+          //   })
+          // })
+          // if(Toastify) {
+          //   Toastify( {
+          //     text: 'Rendering finished !',
+          //     duration: 3000
+          //   } ).showToast();
+          // }
           
 
         }
         } );/* end register handlers */
     // resize logic
-    const paged = new window.Paged.Previewer();
-    const resizer = () => {
-      const pages = document.querySelector( '.pagedjs_pages' );
+    // const paged = new window.Paged.Previewer();
+    // const resizer = () => {
+    //   const pages = document.querySelector( '.pagedjs_pages' );
 
-      if ( pages ) {
-        const scale = ( ( window.innerWidth * .9 ) / pages.offsetWidth );
-        if ( scale < 1 ) {
-          const newWidth = pages.offsetWidth * scale;
-          const newHeight = pages.offsetHeight * scale
-          const translateX = (pages.offsetWidth - newWidth) / 2;
-          const translateY = (pages.offsetHeight - newHeight) / 2;
-          // console.log(pages.offsetHeight, translateY)
-          const style = `translate(${ -translateX }px, ${-translateY}px) scale(${ scale }) `;
-          pages.style.transform = style;
-          // document.body.style.transform = style;
-          // document.body.style['max-height'] = translateY;
-        }
-        else {
-          document.body.style.transform = 'none';
-        }
-      }
-    };
-    resizer();
+    //   if ( pages ) {
+    //     const scale = ( ( window.innerWidth * .9 ) / pages.offsetWidth );
+    //     if ( scale < 1 ) {
+    //       const newWidth = pages.offsetWidth * scale;
+    //       const newHeight = pages.offsetHeight * scale
+    //       const translateX = (pages.offsetWidth - newWidth) / 2;
+    //       const translateY = (pages.offsetHeight - newHeight) / 2;
+    //       // console.log(pages.offsetHeight, translateY)
+    //       const style = `translate(${ -translateX }px, ${-translateY}px) scale(${ scale }) `;
+    //       pages.style.transform = style;
+    //       // document.body.style.transform = style;
+    //       // document.body.style['max-height'] = translateY;
+    //     }
+    //     else {
+    //       document.body.style.transform = 'none';
+    //     }
+    //   }
+    // };
+    // resizer();
 
-    window.addEventListener( 'resize', resizer, false );
+    // window.addEventListener( 'resize', resizer, false );
 
-    paged.on( 'rendering', () => {
-      console.log( 'paged is rendering' );
-      resizer();
-    } );
-    observeDOM( document.body, resizer );
+    // paged.on( 'rendering', () => {
+    //   console.log( 'paged is rendering' );
+    //   resizer();
+    // } );
+    // observeDOM( document.body, resizer );
 
   }
