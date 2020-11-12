@@ -8,6 +8,11 @@
    page: part-three;
 }
 
+/*.titre-partie.part-three .tableofcontents-block-title li{
+	background: var(--pantone-three);
+}*/
+
+
 /* ----- PART THREE COLORS --------*/
 @page part-three{
   /* couleur des numéros de page*/

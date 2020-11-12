@@ -8,6 +8,10 @@
    page: part-two;
 }
 
+/*.titre-partie.part-two .tableofcontents-block-title li{
+	background: var(--pantone-two);
+}*/
+
 /* fixed bug table of contents */
 .part-two.article .tableofcontents-block-title{
 	/*display: none;*/
@@ -15,6 +19,7 @@
 	break-after: avoid;
 
 }
+
 
 /* ----- PART TWO COLORS --------*/
 @page part-two{
@@ -204,6 +209,7 @@
 .controverses .tableofcontents-block-title li::before{
  color:var(--pantone-two);
 }
+
 /* FIN Menu / Sommaire pour chaque thème */
 
 /*.controverses .content-p{

@@ -343,6 +343,10 @@
  color:var(--pantone-one);
 }
 
+/*.titre-partie.part-one .tableofcontents-block-title li{
+	background: var(--pantone-one);
+}*/
+
 /* fin Menu / Sommaire pour chaque thème */
 
 /* Ajouter une page blanche avant chaque fiche */

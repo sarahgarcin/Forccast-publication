@@ -27,6 +27,7 @@ body{
 
 img{
 	width: 100%;
+	display: block;
 }
 
 h1 {
@@ -412,7 +413,8 @@ figure{
 
 .content-figure img {
   mix-blend-mode: screen;
-  filter: grayscale(100%) contrast(110%) brightness(115%);
+  /*filter: grayscale(100%) contrast(110%) brightness(115%);*/
+  filter: contrast(110%) brightness(115%);
   opacity: 1;
   box-sizing: border-box;
 }
@@ -727,6 +729,7 @@ figcaption sup,
 	color: #FFF;
 	width: 100%;
 	position: absolute;
+	z-index: 101;
 	bottom: -1cm;
 	left: -5cm;
 	width: 155mm;
@@ -757,6 +760,8 @@ figcaption sup,
 .fiches .tableofcontents-block-title{
 	break-after: avoid;
 }
+
+
 
 
 
