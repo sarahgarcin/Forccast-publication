@@ -411,6 +411,11 @@ figure{
   box-sizing: border-box;
 }
 
+.content-figure-wrapper{
+	outline: 4px solid #FFF;
+  outline-offset: -2px;
+}
+
 .content-figure img {
   mix-blend-mode: screen;
   /*filter: grayscale(100%) contrast(110%) brightness(115%);*/
