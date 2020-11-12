@@ -411,7 +411,7 @@ figure{
   box-sizing: border-box;
 }
 
-.content-figure-wrapper{
+.content-figure-wrapper, .controverse figure{
 	outline: 4px solid #FFF;
   outline-offset: -2px;
 }
