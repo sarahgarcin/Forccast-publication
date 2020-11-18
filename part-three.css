@@ -308,10 +308,12 @@
   @bottom-right {
    color: var(--pantone-three);
    background-color: #FFF;
+   content: none;
  	}
  	/* contenu titre courant et couleur du titre courant */
  	 @bottom-left {
     color: var(--pantone-three);
     background-color: #FFF;
+    content: none;
   }
 }
