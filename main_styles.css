@@ -167,6 +167,8 @@ sub {
 @page {
   size: 165mm 205mm;
   /*marks: crop; */
+/*  marks: crop cross;
+  bleed: 6mm;*/
 
   /*numéro de page*/
   @bottom-right {
@@ -413,18 +415,17 @@ figure{
 
 
 
-.content-figure-wrapper, .controverse figure{
+/*.content-figure-wrapper, .controverse figure{
 	outline: 4px solid #FFF;
   outline-offset: -2px;
 }
 
 .content-figure img {
   mix-blend-mode: screen;
-  /*filter: grayscale(100%) contrast(110%) brightness(115%);*/
   filter: contrast(110%) brightness(115%);
   opacity: 1;
   box-sizing: border-box;
-}
+}*/
 
 figcaption .figure-caption-content > div, 
 figcaption .figure-caption-content > p{

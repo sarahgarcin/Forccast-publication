@@ -320,7 +320,7 @@ class tramePlus extends Paged.Handler {
         var plusContainer = document.createElement("div");
         plusContainer.classList.add("plus-trame-container");
         page.element.appendChild(plusContainer);
-        for(var i=0; i<=160; i++){
+        for(var i=0; i<=173; i++){
           var random = Math.floor(Math.random()*2);
           var randomRotation = Math.floor(Math.random()*8);
           var plus = document.createElement("div");

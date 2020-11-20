@@ -91,9 +91,9 @@
 	color: var(--pantone-one);
 }
 
-.part-one .content-figure-wrapper{
+/*.part-one .content-figure-wrapper{
 	background: var(--pantone-one);
-}
+}*/
 
 .part-one figcaption,
 .part-one .contents-container figcaption,
