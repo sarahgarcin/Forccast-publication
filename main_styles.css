@@ -313,7 +313,7 @@ h3 + .tableofcontents-block-title + div > .contents-container{
 	margin-top: 0;
 }*/
 
-.content-p +  h2, .content-atomic-container + h2, .content-ul + h2{
+.content-p +  h2, .content-atomic-container + h2, .content-ul + h2, blockquote + h2{
 	margin-top: 27pt;
 }
 
