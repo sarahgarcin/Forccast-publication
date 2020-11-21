@@ -38,6 +38,17 @@
       margin-bottom: 10mm;
   }
   
+/*  .pagedjs_pagebox {
+        --pagedjs-baseline: 13.5pt;
+        --pagedjs-baseline-position: 9.3mm;
+        --pagedjs-baseline-color: cyan;
+        background: linear-gradient(var(--color-paper) 0%, var(--color-paper) calc(var(--pagedjs-baseline) - 1px), var(--pagedjs-baseline-color) calc(var(--pagedjs-baseline) - 1px), var(--pagedjs-baseline-color) var(--pagedjs-baseline)), transparent;
+        background-size: 100% var(--pagedjs-baseline);
+        background-repeat: repeat-y;
+        background-position-y: var(--pagedjs-baseline-position);
+    }*/
+}
+
   .pagedjs_pagebox {
         --pagedjs-baseline: 13.5pt;
         --pagedjs-baseline-position: 9.3mm;
@@ -47,4 +58,3 @@
         background-repeat: repeat-y;
         background-position-y: var(--pagedjs-baseline-position);
     }
-}
