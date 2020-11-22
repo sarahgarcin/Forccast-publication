@@ -444,7 +444,7 @@ figcaption .figure-caption-content > p{
 }
 
 figcaption{
-	padding: 1mm 2px;
+	padding: 1mm 0px;
 	line-height: 1.3;
 	hyphens: none;
   /*margin-top: -2mm;*/
