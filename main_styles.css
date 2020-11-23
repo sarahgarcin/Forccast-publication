@@ -164,6 +164,12 @@ sub {
 
 
 /* ------------ GENERAL PRINT ------------  */
+/*@media print{
+	@page {
+  	size: 165mm 205mm;
+	}
+}*/
+
 @page {
   size: 165mm 205mm;
   /*marks: crop; */
