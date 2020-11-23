@@ -49,7 +49,7 @@
     }*/
 }
 
-/*  .pagedjs_pagebox {
+  .pagedjs_pagebox {
         --pagedjs-baseline: 13.5pt;
         --pagedjs-baseline-position: 9.3mm;
         --pagedjs-baseline-color: cyan;
@@ -57,4 +57,4 @@
         background-size: 100% var(--pagedjs-baseline);
         background-repeat: repeat-y;
         background-position-y: var(--pagedjs-baseline-position);
-    }*/
+    }
