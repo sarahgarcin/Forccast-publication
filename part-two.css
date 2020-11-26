@@ -74,9 +74,9 @@
 	color: var(--pantone-two);
 }
 
-/*.part-two .content-figure figure{
+.part-two .content-figure figure{
 	background: var(--pantone-two);
-}*/
+}
 
 .part-two figcaption,
 .part-two .contents-container figcaption,

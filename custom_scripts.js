@@ -377,7 +377,8 @@ class addPlus extends Paged.Handler {
 				plusContainer.classList.add("plus-tutoriel-container");
 				page.element.appendChild(plusContainer);
 				// console.log(plusContainer);
-				for(var i=0; i<=5253; i++){
+        for(var i=0; i<=4619; i++){
+				// for(var i=0; i<=5253; i++){
 					var plus = document.createElement("div");
 					plus.innerHTML = '+';
 					plus.classList.add("plus-tutoriel");
