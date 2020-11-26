@@ -166,15 +166,15 @@ sub {
 /* ------------ GENERAL PRINT ------------  */
 /*@media print{
 	@page {
-  	size: 165mm 205mm;
+  	size: 167mm 207mm;
 	}
 }*/
 
 @page {
   size: 165mm 205mm;
   /*marks: crop; */
-/*  marks: crop cross;
-  bleed: 6mm;*/
+  marks: crop cross;
+  bleed: 6mm;
 
   /*numéro de page*/
   @bottom-right {

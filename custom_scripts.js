@@ -362,8 +362,8 @@ class addPlus extends Paged.Handler {
 					var plus = document.createElement("div");
 					plus.innerHTML = '+';
 					plus.classList.add("plus");
-					var randomX = Math.floor(Math.random()*600);
-					var randomY = Math.floor(Math.random()*750);
+					var randomX = Math.floor(Math.random()*(630 - 25) + 25);
+					var randomY = Math.floor(Math.random()*(780 - 25) + 25);
 					plus.style.top = randomY + "px";
 					plus.style.left = randomX + "px";
 					page.element.appendChild(plus);
@@ -377,7 +377,7 @@ class addPlus extends Paged.Handler {
 				plusContainer.classList.add("plus-tutoriel-container");
 				page.element.appendChild(plusContainer);
 				// console.log(plusContainer);
-				for(var i=0; i<=4619; i++){
+				for(var i=0; i<=5253; i++){
 					var plus = document.createElement("div");
 					plus.innerHTML = '+';
 					plus.classList.add("plus-tutoriel");
